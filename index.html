@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Mehdi TAMIRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Lien vers notre feuille de style -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+
+<div class="min-h-screen flex relative bg-gray-50">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div id="dateBox" class="text-center text-lg font-medium mb-4">
+      <!-- Date + heure dynamiques en JS -->
+    </div>
+
+    <h1 class="sidebar-title">
+      Mehdi <span class="text-blue-400">TAMIRO</span>
+    </h1>
+
+    <div class="icon-row mb-6">
+      <!-- On utilise des symboles/unicode pour simuler des icônes -->
+      <span class="icon hoverable">☎</span>
+      <span class="icon hoverable">✉</span>
+      <span class="icon hoverable">💬</span>
+      <span class="icon hoverable">🔗</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#" class="nav-btn hoverable">Accueil</a>
+      <a href="#" class="nav-btn hoverable">Profil</a>
+      <a href="#" class="nav-btn hoverable">Parcours</a>
+      <a href="#" class="nav-btn hoverable">Stages</a>
+      <a href="#" class="nav-btn hoverable">Compétences</a>
+      <a href="#" class="nav-btn hoverable">Projets</a>
+      <a href="#" class="nav-btn hoverable">BTS SIO</a>
+      <a href="#" class="nav-btn hoverable">Épreuves</a>
+      <a href="#" class="nav-btn hoverable">Contact</a>
+    </nav>
+
+    <div class="footer-box">
+      © 2025 Mehdi TAMIRO - Tous droits réservés
+    </div>
+  </aside>
+  <!-- END SIDEBAR -->
+
+  <!-- MAIN CONTENT -->
+  <main class="ml-64 w-full p-8">
+    <!-- SECTION 1: HERO -->
+    <section class="hero-section pt-16">
+      <h2 class="text-5xl font-bold">BONJOUR</h2>
+      <hr class="divider">
+      <h1 class="text-6xl font-extrabold mb-6">Je m’appelle Mehdi TAMIRO</h1>
+      <h3 class="text-3xl font-semibold">
+        Étudiant en BTS SIO SISR à EFREI PARIS
+      </h3>
+    </section>
+
+    <!-- SECTION 2: PRÉSENTATION -->
+    <section id="presentation" class="presentation-section">
+      <h2 class="text-5xl font-bold mb-4">Présentation</h2>
+      <hr class="divider">
+      <p class="text-xl max-w-3xl mx-auto">
+        Passionné par l’informatique, attiré par l’IA et la cybersécurité, j’ai
+        suivi un BTS SIO SISR en alternance pour allier théorie et pratique. À
+        l’issue de ce BTS, je souhaite poursuivre en
+        <strong>B3 Ingénierie &amp; Cybersécurité</strong> à EFREI Paris, puis réaliser
+        un Mastère spécialisé en <strong>Cybersécurité &amp; IA</strong>.
+      </p>
+      <button class="gradient-btn mt-4">Mon CV</button>
+    </section>
+
+    <!-- SECTION 3: PARCOURS SCOLAIRE -->
+    <section id="parcours-scolaire" class="parcours-section">
+      <h2 class="text-5xl font-bold mb-4">Mon Parcours Scolaire</h2>
+      <hr class="divider">
+
+      <div class="parcours-container">
+        <!-- Mastère Cybersécurité -->
+        <div class="parcours-item">
+          <div class="year-tag pink-bg">2026–2028</div>
+          <div class="parcours-desc">
+            <p class="desc-title">Mastère Cybersécurité et intelligence artificielle</p>
+            <p>EFREI PARIS<br>à venir</p>
+          </div>
+        </div>
+
+        <!-- B3 Ingénierie & Cybersécurité -->
+        <div class="parcours-item">
+          <div class="year-tag pink-bg">2025–2026</div>
+          <div class="parcours-desc">
+            <p class="desc-title">B3 Ingénierie &amp; Cybersécurité</p>
+            <p>EFREI PARIS<br>à venir<br>Futur Alternance chez Orange</p>
+          </div>
+        </div>
+
+        <!-- BTS SIO SISR -->
+        <div class="parcours-item">
+          <div class="year-tag yellow-bg">2023–2025</div>
+          <div class="parcours-desc">
+            <p class="desc-title">BTS SIO SISR (30-32 avenue de la République – 94800 Villejuif)</p>
+            <p>EFREI PARIS<br>En cours de passation</p>
+          </div>
+        </div>
+
+        <!-- Baccalauréat STI2D -->
+        <div class="parcours-item">
+          <div class="year-tag gray-bg">2019–2022</div>
+          <div class="parcours-desc">
+            <p class="desc-title">Baccalauréat STI2D<br>195 Rue Julian Grimau, 94400 Vitry-sur-Seine</p>
+            <p>Lycée Adolphe Chérioux</p>
+          </div>
+        </div>
+
+        <!-- Brevet des collèges -->
+        <div class="parcours-item">
+          <div class="year-tag green-bg">2019</div>
+          <div class="parcours-desc">
+            <p class="desc-title">Brevet des collèges<br>47 avenue Karl Marx - 94800 Villejuif</p>
+            <p>Collège Karl Marx<br>Mention Bien</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CERTIFICATIONS (EXEMPLE) -->
+    <section id="certifications" class="certifications-section">
+      <h2 class="text-5xl font-bold">Certifications</h2>
+      <hr class="divider">
+      <p class="text-xl max-w-3xl mx-auto">
+        Voici une liste de mes principales certifications, attestations et badges.
+      </p>
+
+      <div class="cert-grid mt-12">
+        <!-- Ex : Google Cybersecurity Professional Certificate -->
+        <div class="cert-card">
+          <div class="cert-image-box">
+            <img
+              src="images/certs/google-cyber.jpg"
+              alt="Google Cybersecurity Professional Certificate"
+              class="cert-image"
+            >
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Google Cybersecurity Professional Certificate</h3>
+            <p class="cert-desc">
+              Certificat officiel de Google démontrant les compétences en cybersécurité.
+            </p>
+            <a
+              href="https://www.coursera.org/account/accomplishments/certificate/2SFA9SBLY1HI"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-btn"
+            >
+              Voir l'attestation
+            </a>
+          </div>
+        </div>
+
+        <!-- Ajoute ici Pentest+, etc. en copiant ce pattern -->
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- SCRIPT : insère date + heure dynamiques -->
+<script>
+  function updateDateTime() {
+    const dateBox = document.getElementById('dateBox');
+    const now = new Date();
+    const dateOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+    const dateStr = now.toLocaleDateString('fr-FR', dateOptions);
+    const timeStr = now.toLocaleTimeString('fr-FR');
+    dateBox.innerHTML = dateStr + '<br>' + timeStr;
+  }
+  setInterval(updateDateTime, 1000);
+  updateDateTime();
+</script>
+
+</body>
+</html>
