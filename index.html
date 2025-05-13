@@ -4,294 +4,120 @@
   <meta charset="UTF-8" />
   <title>Portfolio Mehdi TAMIRO</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     /* RESET + FONTS */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: sans-serif;
-    }
-    body {
-      background-color: #f9fafb;
-      color: #1f2937;
-    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+    body{background:#f9fafb;color:#1f2937;}
 
-    /* LAYOUT */
-    .layout {
-      min-height: 100vh;
-      display: flex;
-      background: #f9fafb;
-      position: relative;
-    }
+    /* GLOBAL LAYOUT */
+    .layout{min-height:100vh;display:flex;background:#f9fafb;}
+    section{padding:4rem 0;}          /* espacement vertical régulier */
+    .divider{width:4rem;height:2px;background:#000;margin:1rem auto;}
 
     /* SIDEBAR */
-    .sidebar {
-      width: 16rem;
-      background: linear-gradient(to bottom, #111827, #1f2937);
-      color: #fff;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      height: 100%;
-      border-top-right-radius: 1.5rem;
-      border-bottom-right-radius: 1.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    .sidebar{
+      width:16rem;
+      background:linear-gradient(to bottom,#111827,#1f2937);
+      color:#fff;padding:1.5rem;
+      display:flex;flex-direction:column;
+      position:fixed;height:100%;
+      border-top-right-radius:1.5rem;border-bottom-right-radius:1.5rem;
+      box-shadow:0 0 10px rgba(0,0,0,.3);
     }
-    .sidebar-time {
-      text-align: center;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    .sidebar-title {
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-    .sidebar-title .accent {
-      color: #60a5fa; /* bleu clair */
-    }
-    .icon-row {
-      display: flex;
-      gap: 0.75rem;
-      font-size: 1.25rem;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-    }
-    .icon {
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-    .icon:hover {
-      color: #60a5fa;
-    }
-    .nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      width: 100%;
-    }
-    .nav-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1.125rem;
-      color: #fff;
-      text-decoration: none;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.25rem;
-      transition: background 0.3s;
-    }
-    .nav-btn:hover {
-      background: #374151;
-    }
-    .footer-text {
-      font-size: 0.75rem;
-      color: #9ca3af;
-      margin-top: auto;
-      text-align: center;
-      padding-bottom: 1rem;
-    }
+    .sidebar-time{text-align:center;font-size:1rem;margin-bottom:1rem;}
+    .sidebar-title{text-align:center;font-size:1.5rem;font-weight:600;margin-bottom:1rem;}
+    .sidebar-title .accent{color:#60a5fa;}
 
-    /* CONTENT */
-    .content {
-      margin-left: 16rem;
-      width: calc(100% - 16rem);
-      padding: 2rem;
+    .icon-row{display:flex;gap:.75rem;font-size:1.25rem;justify-content:center;margin-bottom:1.5rem;}
+    .icon{cursor:pointer;transition:color .3s;}
+    .icon:hover{color:#60a5fa;}
+
+    .nav-links{display:flex;flex-direction:column;gap:.75rem;width:100%;}
+    .nav-btn{
+      display:inline-flex;align-items:center;gap:.5rem;
+      font-size:1.125rem;color:#fff;text-decoration:none;
+      padding:.25rem .5rem;border-radius:.25rem;transition:background .3s;
     }
+    .nav-btn:hover{background:#374151;}
+
+    .footer-text{font-size:.75rem;color:#9ca3af;margin-top:auto;text-align:center;padding-bottom:1rem;}
+
+    /* MAIN CONTENT */
+    .content{margin-left:16rem;width:calc(100%-16rem);padding:2rem;}
 
     /* HERO */
-    .hero {
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      padding-top: 4rem;
-    }
-    .hero-sub {
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    .divider {
-      width: 4rem;
-      height: 2px;
-      background: #000;
-      margin: 1rem auto;
-    }
-    .hero-title {
-      font-size: 3.75rem; /* text-6xl */
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-    }
-    .hero-accroche {
-      font-size: 1.875rem; /* text-3xl */
-      font-weight: 600;
-    }
+    #hero{min-height:100vh;text-align:center;display:flex;flex-direction:column;justify-content:start;padding-top:4rem;}
+    #hero .hero-sub{font-size:3rem;font-weight:bold;margin-bottom:1rem;}
+    #hero .hero-title{font-size:3.75rem;font-weight:800;margin-bottom:1.5rem;}
+    #hero .hero-accroche{font-size:1.875rem;font-weight:600;}
 
     /* PRESENTATION */
-    .presentation {
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    #presentation .title-big{font-size:3rem;font-weight:bold;margin-bottom:1rem;}
+    .presentation-text{font-size:1.25rem;max-width:48rem;margin:0 auto 1.5rem;line-height:1.5;}
+    .cv-button{
+      display:inline-block;background:linear-gradient(to right,#3b82f6,#8b5cf6);
+      color:#fff;padding:.5rem 1rem;border:none;border-radius:.5rem;
+      box-shadow:0 2px 6px rgba(0,0,0,.2);cursor:pointer;font-size:1rem;text-decoration:none;
     }
-    .title-big {
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    .presentation-text {
-      font-size: 1.25rem;
-      max-width: 48rem;
-      margin: 0 auto 1rem;
-      line-height: 1.5;
-    }
-    .cv-button {
-      margin-top: 1rem;
-      background: linear-gradient(to right, #3b82f6, #8b5cf6);
-      color: #fff;
-      padding: 0.5rem 1.5rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-    }
+    .cv-button:hover{opacity:.9;}
 
     /* PARCOURS */
-    .parcours {
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .parcours-title {
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    .parcours-container {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      max-width: 80rem;
-      margin: 0 auto;
-      margin-top: 2rem;
-    }
-    .parcours-item {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-    }
-    @media (min-width:768px) {
-      .parcours-item {
-        flex-direction: row;
-        align-items: center;
-      }
-    }
-    .year-block {
-      width: 8rem;
-      text-align: center;
-      font-weight: bold;
-      padding: 0.5rem;
-      color: #fff;
-      margin: 0.5rem 0;
-      border-radius: 0.5rem 0 0 0.5rem;
-    }
-    .pink-bg { background: #ec4899; }
-    .yellow-bg { background: #f59e0b; }
-    .gray-bg { background: #4b5563; }
-    .green-bg { background: #10b981; }
-    .desc {
-      background: #fff;
-      margin-left: 1rem;
-      margin-right: 1rem;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      flex: 1;
-    }
-    .desc-title {
-      font-weight: bold;
-      margin-bottom: 0.25rem;
-    }
+    #parcours-scolaire{text-align:center;min-height:100vh;display:flex;flex-direction:column;justify-content:center;}
+    .parcours-container{display:flex;flex-direction:column;gap:2rem;max-width:80rem;margin:2rem auto 0;}
+    .parcours-item{display:flex;flex-direction:column;align-items:start;}
+    @media (min-width:768px){.parcours-item{flex-direction:row;align-items:center;}}
+    .year-block{width:8rem;text-align:center;font-weight:bold;padding:.5rem;color:#fff;margin:.5rem 0;border-radius:.5rem 0 0 .5rem;}
+    .pink-bg{background:#ec4899;}
+    .yellow-bg{background:#f59e0b;}
+    .gray-bg{background:#4b5563;}
+    .green-bg{background:#10b981;}
+    .desc{background:#fff;margin-left:1rem;margin-right:1rem;padding:1rem;border-radius:.5rem;box-shadow:0 2px 4px rgba(0,0,0,.1);flex:1;}
+    .desc-title{font-weight:bold;margin-bottom:.25rem;}
 
-    /* CERTIFS */
-    .certifs {
-      text-align: center;
-      padding: 4rem 0;
+    /* BTS SIO (2 colonnes) */
+    #bts-sio h2{font-size:3rem;font-weight:bold;margin-bottom:1rem;}
+    .bts-wrapper{display:flex;flex-direction:column;gap:2rem;max-width:80rem;margin:3rem auto 0;}
+    @media (min-width:900px){.bts-wrapper{flex-direction:row;}}
+    .bts-col{
+      flex:1;background:#fff;border-radius:.5rem;box-shadow:0 2px 6px rgba(0,0,0,.15);
+      padding:1.5rem;display:flex;flex-direction:column;gap:.75rem;
     }
-    .certifs h2 {
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
+    .bts-col h3{font-size:1.5rem;font-weight:bold;text-align:center;margin-bottom:.5rem;}
+    .bts-col ul{list-style:disc;padding-left:1.25rem;line-height:1.5;}
+    .btn-secondary{
+      align-self:center;margin-top:1rem;background:#6366f1;color:#fff;
+      padding:.5rem 1rem;border-radius:.25rem;text-decoration:none;transition:background .3s;
     }
-    .certif-grid {
-      margin-top: 3rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      max-width: 80rem;
-      margin: 3rem auto 0;
+    .btn-secondary:hover{background:#4f46e5;}
+
+    /* STAGES placeholder – même style que les formations */
+    #stages h2,#documentations h2,#e5 h2,#e6 h2{font-size:3rem;font-weight:bold;margin-bottom:1rem;}
+
+    /* COMPETENCES */
+    #competences{text-align:center;}
+    #competences h2{font-size:3rem;font-weight:bold;margin-bottom:1rem;}
+    .compet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;max-width:80rem;margin:3rem auto 0;}
+    .compet-card{
+      display:flex;flex-direction:column;align-items:center;background:#fff;border-radius:.5rem;
+      box-shadow:0 2px 6px rgba(0,0,0,.15);padding:1.5rem;transition:transform .3s;
     }
-    @media (min-width:768px) {
-      .certif-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
+    .compet-card:hover{transform:translateY(-4px);}
+    .compet-logo{width:64px;height:64px;object-fit:contain;margin-bottom:.75rem;}
+    .compet-title{font-size:1.25rem;font-weight:bold;margin-bottom:.5rem;}
+    .compet-desc{font-size:.9rem;color:#374151;text-align:center;}
+
+    /* DOCUMENTATIONS */
+    .docs-list{max-width:60rem;margin:2rem auto 0;display:flex;flex-direction:column;gap:.5rem;}
+    .docs-link{
+      background:#fff;border-radius:.375rem;padding:.75rem 1rem;
+      display:flex;align-items:center;gap:.75rem;
+      text-decoration:none;color:#1f2937;box-shadow:0 1px 4px rgba(0,0,0,.1);
+      transition:background .2s;
     }
-    .cert-card {
-      display: flex;
-      background: #fff;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      overflow: hidden;
-    }
-    .cert-img-box {
-      width: 9rem;
-      background: #e5e7eb;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-    }
-    .cert-img {
-      height: 4rem;
-      width: 4rem;
-      object-fit: contain;
-    }
-    .cert-content {
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: left;
-      flex: 1;
-    }
-    .cert-title {
-      font-size: 1.25rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-    .cert-desc {
-      font-size: 0.875rem;
-      margin-bottom: 0.75rem;
-      color: #374151;
-    }
-    .cert-btn {
-      background: #6366f1;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 0.25rem;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .cert-btn:hover {
-      background: #4f46e5;
-    }
+    .docs-link:hover{background:#f3f4f6;}
+    .docs-link span{font-size:1.25rem;}
+
   </style>
 </head>
 <body>
@@ -302,357 +128,233 @@
       <h1 class="sidebar-title">Mehdi <span class="accent">TAMIRO</span></h1>
 
       <div class="icon-row">
-        <span class="icon">&#128222;</span>
-        <span class="icon">&#128231;</span>
-        <span class="icon">&#128172;</span>
-        <span class="icon">&#128279;</span>
+        <span class="icon" title="Téléphone">📞</span>
+        <span class="icon" title="Email">✉️</span>
+        <span class="icon" title="Message">💬</span>
+        <span class="icon" title="Lien">🔗</span>
       </div>
 
       <nav class="nav-links">
-        <a href="#" class="nav-btn"><span style='font-size:1.3rem;'>&#127968;</span> Accueil</a>
-        <a href="#" class="nav-btn"><span style='font-size:1.3rem;'>&#128100;</span> Profil</a>
-        <a href="#parcours-scolaire" class="nav-btn"><span style='font-size:1.3rem;'>&#127891;</span> Parcours</a>
-        <a href="#" class="nav-btn"><span style='font-size:1.3rem;'>&#128188;</span> Stages</a>
-        <a href="#" class="nav-btn"><span style='font-size:1.3rem;'>&#128187;</span> Compétences</a>
-        <a href="#" class="nav-btn"><span style='font-size:1.3rem;'>&#128421;&#65039;</span> Projets</a>
-        <a href="#" class="nav-btn"><span style='font-size:1.3rem;'>&#128193;</span> BTS SIO</a>
-        <a href="#" class="nav-btn"><span style='font-size:1.3rem;'>&#128214;</span> Épreuves</a>
-        <a href="#" class="nav-btn"><span style='font-size:1.3rem;'>&#128233;</span> Contact</a>
+        <a href="#hero" class="nav-btn"><span style="font-size:1.3rem;">👤</span> Profil</a>
+        <a href="#parcours-scolaire" class="nav-btn"><span style="font-size:1.3rem;">🎓</span> Parcours</a>
+        <a href="#bts-sio" class="nav-btn"><span style="font-size:1.3rem;">💻</span> BTS SIO</a>
+        <a href="#stages" class="nav-btn"><span style="font-size:1.3rem;">💼</span> Stages</a>
+        <a href="#competences" class="nav-btn"><span style="font-size:1.3rem;">🛡️</span> Compétences</a>
+        <a href="#documentations" class="nav-btn"><span style="font-size:1.3rem;">📂</span> Documentations</a>
+        <a href="#e5" class="nav-btn"><span style="font-size:1.3rem;">📑</span> E5</a>
+        <a href="#e6" class="nav-btn"><span style="font-size:1.3rem;">📑</span> E6</a>
       </nav>
 
-      <div class="footer-text">
-        © 2025 Mehdi TAMIRO - Tous droits réservés
-      </div>
+      <div class="footer-text">© 2025 Mehdi TAMIRO – Tous droits réservés</div>
     </aside>
 
     <!-- MAIN CONTENT -->
     <main class="content">
-      <!-- SECTION 1: HERO -->
-      <section class="hero">
+      <!-- HERO / PROFIL -->
+      <section id="hero">
         <h2 class="hero-sub">BONJOUR</h2>
         <div class="divider"></div>
-        <h1 class="hero-title">Je m’appelle Mehdi TAMIRO</h1>
-        <h3 class="hero-accroche">Étudiant en BTS SIO SISR à EFREI PARIS</h3>
+        <h1 class="hero-title">Je m’appelle Mehdi TAMIRO</h1>
+        <h3 class="hero-accroche">Étudiant en BTS SIO SISR à EFREI Paris</h3>
       </section>
 
-      <!-- SECTION 2: PRESENTATION -->
-      <section id="presentation" class="presentation">
+      <!-- PRESENTATION -->
+      <section id="presentation">
         <h2 class="title-big">Présentation</h2>
         <div class="divider"></div>
         <p class="presentation-text">
-          Passionné par l’informatique, attiré par l’IA et la cybersécurité, j’ai suivi un BTS SIO SISR en alternance pour allier théorie et pratique. À l’issue de ce BTS, je souhaite poursuivre en <strong>B3 Ingénierie &amp; Cybersécurité</strong> à EFREI Paris, puis réaliser un Mastère spécialisé en <strong>Cybersécurité &amp; IA</strong>.
+          Passionné par l’informatique, attiré par l’IA et la cybersécurité, j’ai suivi un BTS SIO SISR
+          en alternance pour allier théorie et pratique. À l’issue de ce BTS, je souhaite poursuivre en
+          <strong>B3 Ingénierie &amp; Cybersécurité</strong> à EFREI Paris, puis réaliser un Mastère
+          spécialisé en <strong>Cybersécurité &amp; IA</strong>.
         </p>
-        <button class="cv-button">Mon CV</button>
+        <a href="CV_Mehdi_TAMIRO_Efrei_20250510.pdf" target="_blank" class="cv-button">Mon CV</a>
       </section>
 
-      <!-- SECTION 3: PARCOURS SCOLAIRE -->
-      <section id="parcours-scolaire" class="parcours">
+      <!-- PARCOURS SCOLAIRE -->
+      <section id="parcours-scolaire">
         <h2 class="parcours-title">Mon Parcours Scolaire</h2>
         <div class="divider"></div>
 
         <div class="parcours-container">
-          <!-- Mastère Cybersécurité -->
           <div class="parcours-item">
             <div class="year-block pink-bg">2026–2028</div>
             <div class="desc">
-              <p class="desc-title">Mastère Cybersécurité et intelligence artificielle</p>
-              <p>EFREI PARIS<br>à venir</p>
+              <p class="desc-title">Mastère Cybersécurité &amp; Intelligence Artificielle</p>
+              <p>EFREI Paris<br>(à venir)</p>
             </div>
           </div>
 
-          <!-- B3 Ingénierie & Cybersécurité -->
           <div class="parcours-item">
             <div class="year-block pink-bg">2025–2026</div>
             <div class="desc">
               <p class="desc-title">B3 Ingénierie &amp; Cybersécurité</p>
-              <p>EFREI PARIS<br>à venir<br>Futur Alternance chez Orange : 132 Av. de Stalingrad, 94800 Villejuif</p>
+              <p>EFREI Paris<br>(à venir)<br>Futur alternance – Orange (132 Av. de Stalingrad, 94800 Villejuif)</p>
             </div>
           </div>
 
-          <!-- BTS SIO SISR -->
           <div class="parcours-item">
-            <div class="year-block yellow-bg">2023-2025</div>
+            <div class="year-block yellow-bg">2023–2025</div>
             <div class="desc">
-              <p class="desc-title">BTS SIO SISR (30-32 avenue de la République – 94800 Villejuif)</p>
-              <p>EFREI PARIS<br>En cours de passation</p>
+              <p class="desc-title">BTS SIO SISR</p>
+              <p>EFREI Paris<br>En cours de passation</p>
             </div>
           </div>
 
-          <!-- Baccalauréat STI2D -->
           <div class="parcours-item">
-            <div class="year-block gray-bg">2019-2022</div>
+            <div class="year-block gray-bg">2019–2022</div>
             <div class="desc">
-              <p class="desc-title">Baccalauréat STI2D<br>195 Rue Julian Grimau, 94400 Vitry-sur-Seine</p>
-              <p>Lycée Adolphe Chérioux</p>
+              <p class="desc-title">Baccalauréat STI2D</p>
+              <p>Lycée Adolphe Chérioux (Vitry‑sur‑Seine)</p>
             </div>
           </div>
 
-          <!-- Brevet des collèges -->
           <div class="parcours-item">
             <div class="year-block green-bg">2019</div>
             <div class="desc">
-              <p class="desc-title">Brevet des collèges<br>47 avenue Karl Marx - 94800 Villejuif</p>
-              <p>Collège Karl Marx<br>Mention Bien</p>
+              <p class="desc-title">Brevet des collèges</p>
+              <p>Collège Karl Marx (Villejuif) – Mention Bien</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SECTION 5: CERTIFICATIONS -->
-      <section id="certifications" class="certifs">
-        <h2>Certifications</h2>
+      <!-- BTS‑SIO -->
+      <section id="bts-sio">
+        <h2>Mes Formations – BTS SIO</h2>
         <div class="divider"></div>
-        <p style="font-size:1.25rem; max-width:48rem; margin:0 auto; color:#374151; margin-top:1rem;">
-          Voici une liste de mes principales certifications, attestations et badges.
+        <p style="max-width:60rem;margin:0 auto 1.5rem;font-size:1.125rem;line-height:1.6;">
+          <strong>Qu’est‑ce que le BTS‑SIO&nbsp;?</strong> Le BTS‑SIO (Services Informatiques aux Organisations)
+          est une formation en deux ans menant au titre de technicien supérieur. Deux spécialités existent :
+          <em>SISR</em> (infrastructure &amp; réseau) et <em>SLAM</em> (développement). Je me suis spécialisé en
+          deuxième année dans la filière <em>SISR</em>. Voici un aperçu des compétences acquises :
         </p>
 
-        <div class="certif-grid">
-          <!-- Google Cybersecurity Professional Certificate -->
-          <div class="cert-card">
-            <div class="cert-img-box">
-              <img
-                src="images/certs/google-cyber.jpg"
-                alt="Google Cybersecurity Professional Certificate"
-                class="cert-img"
-              />
-            </div>
-            <div class="cert-content">
-              <h3 class="cert-title">Google Cybersecurity Professional Certificate</h3>
-              <p class="cert-desc">Certificat officiel de Google démontrant les compétences en cybersécurité.</p>
-              <a
-                href="https://www.coursera.org/account/accomplishments/certificate/2SFA9SBLY1HI"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cert-btn"
-              >
-                Voir l'attestation
-              </a>
-            </div>
+        <div class="bts-wrapper">
+          <!-- 1ʳᵉ année -->
+          <div class="bts-col">
+            <h3>1<sup>re</sup> année</h3>
+            <ul>
+              <li><strong>Matières générales</strong> : mathématiques pour l’informatique, culture générale &amp; expression, culture économique/​juridique/​managériale, anglais.</li>
+              <li><strong>Administration réseaux &amp; support</strong> : bases Cisco, topologies, préparation d’un projet d’infrastructure (Packet Tracer, simulations).</li>
+              <li><strong>Cybersécurité</strong> : principes fondamentaux, modèles de menaces, notions de chiffrement.</li>
+              <li><strong>Conception / Développement web</strong> : HTML‑CSS, découverte de JavaScript et PHP.</li>
+            </ul>
+          </div>
+
+          <!-- 2ᵉ année -->
+          <div class="bts-col">
+            <h3>2<sup>e</sup> année</h3>
+            <ul>
+              <li><strong>Administration réseaux & support avancés</strong> : mise en œuvre d’un projet d’infrastructure complet (VLAN, routage, DHCP, pare‑feu) sur matériel Cisco.</li>
+              <li><strong>Cybersécurité appliquée</strong> : audit de configuration, durcissement des services, gestion des sauvegardes.</li>
+              <li><strong>Services cloud &amp; virtualisation</strong> : VMware ESXi, Proxmox, sauvegarde/restauration.</li>
+              <li><strong>Veille technologique</strong> : présentation d’une revue de presse cybersécurité.</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="https://www.efrei.fr/programmes-experts/bts-sio/" target="_blank" class="btn-secondary">En savoir plus</a>
+      </section>
+
+      <!-- STAGES -->
+      <section id="stages">
+        <h2>Stages</h2>
+        <div class="divider"></div>
+        <p style="text-align:center;">(Section à venir)</p>
+      </section>
+
+      <!-- COMPÉTENCES & CERTIFICATIONS -->
+      <section id="competences">
+        <h2>Compétences &amp; Certifications</h2>
+        <div class="divider"></div>
+
+        <div class="compet-grid">
+          <!-- Google Cybersecurity Professional -->
+          <div class="compet-card">
+            <img class="compet-logo" src="https://logo.clearbit.com/google.com" alt="Google logo">
+            <h3 class="compet-title">Google Cybersecurity Professional Certificate</h3>
+            <p class="compet-desc">Compétences fondamentales en cybersécurité validées par Google.</p>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/2SFA9SBLY1HI" target="_blank" class="btn-secondary">Voir l’attestation</a>
           </div>
 
           <!-- CompTIA Pentest+ -->
-          <div class="cert-card">
-            <div class="cert-img-box">
-              <img
-                src="images/certs/pentest-plus.jpg"
-                alt="CompTIA Pentest+"
-                class="cert-img"
-              />
-            </div>
-            <div class="cert-content">
-              <h3 class="cert-title">CompTIA Pentest+</h3>
-              <p class="cert-desc">Certification démontrant les compétences en test d'intrusion.</p>
-              <a
-                href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-LU85GCD9QR.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cert-btn"
-              >
-                Voir l'attestation
-              </a>
-            </div>
+          <div class="compet-card">
+            <img class="compet-logo" src="https://logo.clearbit.com/comptia.org" alt="CompTIA logo">
+            <h3 class="compet-title">CompTIA Pentest+</h3>
+            <p class="compet-desc">Certification attestant de compétences en test d’intrusion et méthodologie PTES.</p>
+            <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-LU85GCD9QR.pdf" target="_blank" class="btn-secondary">Voir l’attestation</a>
           </div>
 
-          <!-- Complete Beginner -->
-          <div class="cert-card">
-            <div class="cert-img-box">
-              <img
-                src="images/certs/complete-beginner.jpg"
-                alt="Complete Beginner"
-                class="cert-img"
-              />
-            </div>
-            <div class="cert-content">
-              <h3 class="cert-title">Complete Beginner</h3>
-              <p class="cert-desc">Pour bien débuter la cybersécurité.</p>
-              <a
-                href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RUALOZJ3I0.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cert-btn"
-              >
-                Voir l'attestation
-              </a>
-            </div>
-          </div>
-
-          <!-- Cyber Threat Management -->
-          <div class="cert-card">
-            <div class="cert-img-box">
-              <img
-                src="images/certs/threat-management.jpg"
-                alt="Cyber Threat Management"
-                class="cert-img"
-              />
-            </div>
-            <div class="cert-content">
-              <h3 class="cert-title">Cyber Threat Management</h3>
-              <p class="cert-desc">Apprendre à identifier et gérer les menaces cyber.</p>
-              <a
-                href="https://www.credly.com/badges/0ae5354e-fb34-4c63-86e1-e57ce61f89e7"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cert-btn"
-              >
-                Voir l'attestation
-              </a>
-            </div>
-          </div>
-
-          <!-- Data Analytics Essentials -->
-          <div class="cert-card">
-            <div class="cert-img-box">
-              <img
-                src="images/certs/data-analytics.jpg"
-                alt="Data Analytics Essentials"
-                class="cert-img"
-              />
-            </div>
-            <div class="cert-content">
-              <h3 class="cert-title">Data Analytics Essentials</h3>
-              <p class="cert-desc">Notions clés en analyse de données.</p>
-              <a
-                href="https://www.credly.com/badges/460603c9-b818-48d3-b514-9a110c6277f7"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cert-btn"
-              >
-                Voir l'attestation
-              </a>
-            </div>
-          </div>
-
-          <!-- Ethical Hacker -->
-          <div class="cert-card">
-            <div class="cert-img-box">
-              <img
-                src="images/certs/ethical-hacker.jpg"
-                alt="Ethical Hacker"
-                class="cert-img"
-              />
-            </div>
-            <div class="cert-content">
-              <h3 class="cert-title">Ethical Hacker</h3>
-              <p class="cert-desc">Techniques d'attaque et de défense éthiques.</p>
-              <a
-                href="https://www.credly.com/badges/1cb9822d-291c-461e-8c11-3de39243a28b"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cert-btn"
-              >
-                Voir l'attestation
-              </a>
-            </div>
-          </div>
-
-          <!-- Introduction to Data Science -->
-          <div class="cert-card">
-            <div class="cert-img-box">
-              <img
-                src="images/certs/data-science.jpg"
-                alt="Introduction to Data Science"
-                class="cert-img"
-              />
-            </div>
-            <div class="cert-content">
-              <h3 class="cert-title">Introduction to Data Science</h3>
-              <p class="cert-desc">Les bases de la science des données.</p>
-              <a
-                href="https://www.credly.com/badges/dcb35a61-b10e-4ecb-8272-d67712d75405"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cert-btn"
-              >
-                Voir l'attestation
-              </a>
-            </div>
-          </div>
-
-          <!-- Sécurité des terminaux -->
-          <div class="cert-card">
-            <div class="cert-img-box">
-              <img
-                src="images/certs/device-security.jpg"
-                alt="Sécurité des terminaux"
-                class="cert-img"
-              />
-            </div>
-            <div class="cert-content">
-              <h3 class="cert-title">Sécurité des terminaux</h3>
-              <p class="cert-desc">Protection des PC, smartphones et autres endpoints.</p>
-              <a
-                href="https://www.credly.com/badges/45d2e23f-c38e-439c-ac8b-689e9e25ea38"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cert-btn"
-              >
-                Voir l'attestation
-              </a>
-            </div>
-          </div>
-
-          <!-- Défense du réseau -->
-          <div class="cert-card">
-            <div class="cert-img-box">
-              <img
-                src="images/certs/net-defense.jpg"
-                alt="Défense du réseau"
-                class="cert-img"
-              />
-            </div>
-            <div class="cert-content">
-              <h3 class="cert-title">Défense du réseau</h3>
-              <p class="cert-desc">Mettre en place des mécanismes de défense sur les architectures réseau.</p>
-              <a
-                href="https://www.credly.com/badges/0dc22bb6-1c4c-4061-9e01-0cf9f85dae1d"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cert-btn"
-              >
-                Voir l'attestation
-              </a>
-            </div>
-          </div>
-
-          <!-- Introduction to Modern AI -->
-          <div class="cert-card">
-            <div class="cert-img-box">
-              <img
-                src="images/certs/modern-ai.jpg"
-                alt="Introduction to Modern AI"
-                class="cert-img"
-              />
-            </div>
-            <div class="cert-content">
-              <h3 class="cert-title">Introduction to Modern AI</h3>
-              <p class="cert-desc">Principes de l'intelligence artificielle et ses applications.</p>
-              <a
-                href="https://www.credly.com/badges/5e328941-1256-4df2-99a2-18f8546992b3"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cert-btn"
-              >
-                Voir l'attestation
-              </a>
-            </div>
+          <!-- TryHackMe Complete Beginner -->
+          <div class="compet-card">
+            <img class="compet-logo" src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" alt="TryHackMe logo">
+            <h3 class="compet-title">TryHackMe – Complete Beginner</h3>
+            <p class="compet-desc">Parcours d’introduction à la cybersécurité (réseaux, Linux, Windows, web).</p>
+            <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RUALOZJ3I0.pdf" target="_blank" class="btn-secondary">Voir l’attestation</a>
           </div>
         </div>
+      </section>
+
+      <!-- DOCUMENTATIONS -->
+      <section id="documentations">
+        <h2>Documentations</h2>
+        <div class="divider"></div>
+
+        <div class="docs-list">
+          <a href="Bureau%20a%20distanceREFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>Bureau à distance – REFONTE</a>
+          <a href="Compte-rendu-reseau-complexe-2REFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>Compte‑rendu réseau complexe (2) – REFONTE</a>
+          <a href="Informatique%20-%20Admin%20linuxREFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>Admin Linux – REFONTE</a>
+          <a href="Paramétrage-Route-VlanREFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>Paramétrage Route/VLAN – REFONTE</a>
+          <a href="SSHREFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>SSH – REFONTE</a>
+          <a href="Serveur-ApacheREFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>Serveur Apache – REFONTE</a>
+          <a href="TP%20GLPIREFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>TP GLPI – REFONTE</a>
+          <a href="TP-Commandes%20LinuxREFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>TP Commandes Linux – REFONTE</a>
+          <a href="TP-Virtualisation%20REFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>TP Virtualisation – REFONTE</a>
+          <a href="TP-reseau-complexe-1REFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>TP Réseau complexe (1) – REFONTE</a>
+          <a href="TP-serveur-DHCPREFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>TP Serveur DHCP – REFONTE</a>
+          <a href="cours-réseauREFONTE.pdf" class="docs-link" target="_blank"><span>📄</span>Cours réseau – REFONTE</a>
+        </div>
+      </section>
+
+      <!-- ÉPREUVES E5 -->
+      <section id="e5">
+        <h2>Épreuve E5</h2>
+        <div class="divider"></div>
+        <p style="text-align:center;">Documents E5 à venir.</p>
+      </section>
+
+      <!-- ÉPREUVES E6 -->
+      <section id="e6">
+        <h2>Épreuve E6</h2>
+        <div class="divider"></div>
+        <p style="text-align:center;">Documents E6 à venir.</p>
       </section>
     </main>
   </div>
 
-  <!-- JS : date/heure en haut -->
+  <!-- JS : date/heure en haut + smooth scroll -->
   <script>
-    function updateDateTime() {
-      const dateBox = document.getElementById('dateBox');
-      const now = new Date();
-      const dateOpts = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-      const dateStr = now.toLocaleDateString('fr-FR', dateOpts);
-      const timeStr = now.toLocaleTimeString('fr-FR');
-      dateBox.innerHTML = dateStr + '<br>' + timeStr;
+    function updateDateTime(){
+      const box=document.getElementById('dateBox');
+      const now=new Date();
+      const dateOpts={weekday:'long',day:'numeric',month:'long',year:'numeric'};
+      const dateStr=now.toLocaleDateString('fr-FR',dateOpts);
+      const timeStr=now.toLocaleTimeString('fr-FR');
+      box.innerHTML=dateStr+'<br>'+timeStr;
     }
-    setInterval(updateDateTime, 1000);
-    updateDateTime();
+    setInterval(updateDateTime,1000);updateDateTime();
+
+    /* défilement fluide */
+    document.querySelectorAll('a[href^=\"#\"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth'});
+        }
+      });
+    });
   </script>
 </body>
 </html>
