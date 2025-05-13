@@ -12,7 +12,7 @@
 
     /* ========== GLOBAL LAYOUT ========= */
     .layout{min-height:100vh;display:flex;}
-    section{padding:4rem 0;}
+    section{padding:4rem 0;text-align:center;}      /* tout le contenu centré */
     .divider{width:4rem;height:2px;background:#000;margin:1rem auto;}
 
     /* -------- sidebar -------- */
@@ -42,37 +42,35 @@
     .content{margin-left:16rem;width:calc(100% - 16rem);padding:2rem;}
 
     /* -------- hero -------- */
-    #hero{min-height:100vh;text-align:center;display:flex;flex-direction:column;justify-content:start;padding-top:4rem;}
+    #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:start;padding-top:4rem;}
     .hero-sub{font-size:3rem;font-weight:bold;margin-bottom:1rem;}
     .hero-title{font-size:3.75rem;font-weight:800;margin-bottom:1.5rem;}
     .hero-accroche{font-size:1.875rem;font-weight:600;}
 
     /* -------- présentation -------- */
-    .title-big{font-size:3rem;font-weight:bold;margin-bottom:1rem;text-align:center;}
-    .presentation-text{font-size:1.25rem;max-width:48rem;margin:0 auto 1.5rem;line-height:1.5;text-align:center;}
-    .cv-button{
-      display:inline-block;background:linear-gradient(to right,#3b82f6,#8b5cf6);
+    .title-big{font-size:3rem;font-weight:bold;margin-bottom:1rem;}
+    .presentation-text{font-size:1.25rem;max-width:48rem;margin:0 auto 1.5rem;line-height:1.6;}
+    .btn-main{
+      display:inline-block;margin:0 auto;background:linear-gradient(to right,#3b82f6,#8b5cf6);
       color:#fff;padding:.65rem 1.3rem;border-radius:.55rem;font-size:1rem;text-decoration:none;
       box-shadow:0 2px 6px rgba(0,0,0,.18);transition:opacity .25s;
     }
-    .cv-button:hover{opacity:.9;}
+    .btn-main:hover{opacity:.9;}
 
     /* -------- parcours -------- */
-    #parcours-scolaire{text-align:center;}
     .parcours-container{display:flex;flex-direction:column;gap:2rem;max-width:80rem;margin:2rem auto 0;}
     .parcours-item{display:flex;flex-direction:column;align-items:center;}
-    @media(min-width:768px){.parcours-item{flex-direction:row;}}
+    @media(min-width:768px){.parcours-item{flex-direction:row;text-align:left;}}
     .year-block{width:8rem;text-align:center;font-weight:700;padding:.5rem;color:#fff;border-radius:.55rem 0 0 .55rem;margin:.5rem 0;}
     .pink-bg{background:#ec4899;}
     .yellow-bg{background:#f59e0b;}
     .gray-bg{background:#4b5563;}
     .green-bg{background:#10b981;}
-    .desc{flex:1;background:#fff;margin:0 1rem;padding:1rem;border-radius:.55rem;box-shadow:0 2px 4px rgba(0,0,0,.1);text-align:left;}
+    .desc{flex:1;background:#fff;margin:0 1rem;padding:1rem;border-radius:.55rem;box-shadow:0 2px 4px rgba(0,0,0,.1);}
     .desc-title{font-weight:700;margin-bottom:.3rem;}
 
     /* -------- BTS‑SIO -------- */
-    #bts-sio h2{font-size:3rem;font-weight:700;margin-bottom:1rem;text-align:center;}
-    .bts-wrapper{max-width:80rem;margin:3rem auto 0;display:flex;flex-direction:column;gap:2rem;}
+    .bts-wrapper{max-width:80rem;margin:3rem auto 0;display:flex;flex-direction:column;gap:2rem;text-align:left;}
     @media(min-width:900px){.bts-wrapper{flex-direction:row;}}
     .bts-col{
       flex:1;background:#fff;border-radius:.55rem;box-shadow:0 2px 6px rgba(0,0,0,.15);
@@ -80,50 +78,35 @@
     }
     .bts-col h3{text-align:center;font-size:1.6rem;font-weight:700;margin-bottom:.5rem;}
     .bts-col ul{list-style:disc;padding-left:1.3rem;line-height:1.55;}
-    .btn-secondary{
-      align-self:center;margin-top:1rem;background:#6366f1;color:#fff;
-      padding:.55rem 1.15rem;border-radius:.35rem;text-decoration:none;transition:background .3s;
-    }
-    .btn-secondary:hover{background:#4f46e5;}
 
     /* -------- compétences -------- */
-    #competences{text-align:center;}
-    #competences h2{font-size:3rem;font-weight:700;margin-bottom:1rem;}
     .compet-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2rem;max-width:80rem;margin:3rem auto 0;}
     .compet-card{
-      background:#fff;border-radius:.55rem;box-shadow:0 2px 6px rgba(0,0,0,.15);
-      padding:1.6rem;display:flex;flex-direction:column;align-items:center;gap:.7rem;
+      background:#fff;border-radius:.75rem;box-shadow:0 4px 8px rgba(0,0,0,.12);
+      padding:2rem;display:flex;flex-direction:column;align-items:center;gap:1rem;
       transition:transform .25s;
     }
-    .compet-card:hover{transform:translateY(-4px);}
-    .compet-logo{width:64px;height:64px;object-fit:contain;}
-    .compet-title{font-size:1.25rem;font-weight:700;text-align:center;}
-    .compet-desc{font-size:.9rem;color:#374151;text-align:center;}
+    .compet-card:hover{transform:translateY(-6px);}
+    .compet-logo{width:72px;height:72px;object-fit:contain;}
+    .compet-title{font-size:1.3rem;font-weight:700;text-align:center;}
+    .compet-desc{font-size:.95rem;color:#374151;text-align:center;}
+    .btn-cert{background:#6366f1;color:#fff;padding:.55rem 1.2rem;border-radius:.4rem;text-decoration:none;}
+    .btn-cert:hover{background:#4f46e5;}
 
     /* -------- doc / e5 / e6 grid -------- */
-    .docs-grid{
-      display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-      gap:1.4rem;max-width:1000px;margin:2rem auto 0;
-    }
-    .doc-card{
-      background:#fff;border-radius:.65rem;box-shadow:0 2px 6px rgba(0,0,0,.12);
-      overflow:hidden;text-decoration:none;color:#1f2937;transition:transform .25s;
-      display:flex;flex-direction:column;align-items:center;text-align:center;
-    }
+    .docs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem;max-width:1000px;margin:2rem auto 0;justify-content:center;}
+    .doc-card{background:#fff;border-radius:.65rem;box-shadow:0 2px 6px rgba(0,0,0,.12);overflow:hidden;text-decoration:none;color:#1f2937;transition:transform .25s;display:flex;flex-direction:column;}
     .doc-card:hover{transform:translateY(-4px);}
     .doc-thumb{width:100%;height:160px;object-fit:cover;}
     .doc-label{padding:1rem;font-weight:600;font-size:1rem;}
 
     /* -------- stages -------- */
-    .stage-card{
-      max-width:70rem;margin:0 auto;background:#fff;border-radius:.65rem;box-shadow:0 2px 6px rgba(0,0,0,.15);
-      padding:2rem;line-height:1.6;font-size:1.05rem;
-    }
-    .stage-card h3{font-size:1.6rem;font-weight:700;margin-bottom:.8rem;text-align:center;}
+    .stage-grid{display:grid;grid-template-columns:1fr;gap:2rem;max-width:80rem;margin:0 auto;}
+    .stage-card{background:#fff;border-radius:.65rem;box-shadow:0 2px 6px rgba(0,0,0,.15);padding:2rem;text-align:left;line-height:1.6;font-size:1.05rem;}
+    .stage-card h3{text-align:center;font-size:1.6rem;font-weight:700;margin-bottom:.8rem;}
 
-    /* center generic paragraphs */
-    section p{text-align:center;}
-
+    /* centre les paragraphes génériques */
+    section p:not(.stage-card p){text-align:center;}
   </style>
 </head>
 <body>
@@ -175,15 +158,14 @@
           <strong>B3 Ingénierie &amp; Cybersécurité</strong> à EFREI Paris, puis réaliser un Mastère
           spécialisé en <strong>Cybersécurité &amp; IA</strong>.
         </p>
-        <a href="CV_Mehdi_TAMIRO_Efrei_20250510%20(1).pdf" target="_blank" class="cv-button">Mon CV</a>
+        <a href="CV_Mehdi_TAMIRO_Efrei_20250510%20(1).pdf" target="_blank" class="btn-main">Mon CV</a>
       </section>
 
       <!-- PARCOURS SCOLAIRE -->
       <section id="parcours-scolaire">
-        <h2 class="parcours-title">Mon Parcours Scolaire</h2>
+        <h2 class="title-big">Mon Parcours Scolaire</h2>
         <div class="divider"></div>
         <div class="parcours-container">
-          <!-- items inchangés -->
           <div class="parcours-item"><div class="year-block pink-bg">2026‑2028</div><div class="desc"><p class="desc-title">Mastère Cybersécurité &amp; IA</p><p>EFREI Paris — Prévu</p></div></div>
           <div class="parcours-item"><div class="year-block pink-bg">2025‑2026</div><div class="desc"><p class="desc-title">B3 Ingénierie &amp; Cybersécurité</p><p>EFREI Paris — Prévu<br>Alternance Orange</p></div></div>
           <div class="parcours-item"><div class="year-block yellow-bg">2023‑2025</div><div class="desc"><p class="desc-title">BTS SIO SISR</p><p>EFREI Paris — En cours</p></div></div>
@@ -194,142 +176,134 @@
 
       <!-- BTS SIO -->
       <section id="bts-sio">
-        <h2>Mes Formations – BTS SIO</h2>
+        <h2 class="title-big">Mes Formations – BTS SIO</h2>
         <div class="divider"></div>
-        <p style="max-width:60rem;margin:0 auto 1.5rem;font-size:1.125rem;line-height:1.6;">
-          Le BTS‑SIO (Services Informatiques aux Organisations) dure deux ans et propose les options
-          <em>SISR</em> (infrastructure) et <em>SLAM</em> (développement). Je suis en SISR ; voici les
-          points clés :
-        </p>
         <div class="bts-wrapper">
           <div class="bts-col">
-            <h3>1<sup>re</sup> année</h3>
+            <h3>1<sup>ʳᵉ</sup> année de BTS‑SIO</h3>
             <ul>
-              <li>Matières générales : maths, économie/​droit, anglais, culture G.</li>
-              <li>Admin réseau : topologies Cisco, Packet Tracer.</li>
-              <li>Cybersécurité : principes, cryptographie.</li>
-              <li>Dev web : HTML‑CSS, JS, PHP (bases).</li>
+              <li><strong>Matières générales :</strong> Mathématiques pour l’informatique ; Culture Générale &amp; Expression ; Culture économique, managériale et juridique ; Anglais.</li>
+              <li><strong>Administration des services et des réseaux + Support</strong> : préparation d’un projet d’infrastructure (TP Cisco + simulation des services réseau).</li>
+              <li><strong>Cybersécurité des services informatiques</strong> : cours théoriques sur la sécurité informatique.</li>
+              <li><strong>Conception &amp; développement d’applications</strong> : étude des langages pour créer un site web.</li>
             </ul>
           </div>
           <div class="bts-col">
-            <h3>2<sup>e</sup> année</h3>
+            <h3>2<sup>ᵉ</sup> année de BTS‑SIO</h3>
             <ul>
-              <li>Infra avancée : VLAN, routage, DHCP, pare‑feu.</li>
-              <li>Sécurité appliquée : audit, durcissement.</li>
-              <li>Virtualisation &amp; cloud : VMware, Proxmox.</li>
-              <li>Veille technologique régulière.</li>
+              <li><strong>Matières générales :</strong> Mathématiques pour l’informatique ; Culture Générale &amp; Expression ; Culture économique, managériale et juridique ; Anglais.</li>
+              <li><strong>Administration des services et des réseaux + Support</strong> : réalisation, en groupe, du projet d’infrastructure réseau sur équipement réel.</li>
+              <li><strong>Cybersécurité des services informatiques</strong> : compléments pratiques via réunions « sécurisation d’infrastructures » (suite à des sabotages simulés).</li>
             </ul>
           </div>
         </div>
-        <a href="https://www.efrei.fr/programmes-experts/bts-sio/" target="_blank" class="btn-secondary">En savoir plus</a>
+        <a href="https://www.efrei.fr/programmes-experts/bts-sio/" target="_blank" class="btn-main" style="margin-top:2rem;">En savoir plus</a>
       </section>
 
       <!-- STAGES -->
       <section id="stages">
-        <h2>Stages</h2>
+        <h2 class="title-big">Stages</h2>
         <div class="divider"></div>
-        <div class="stage-card">
-          <h3>Stage — Assistant administrateur systèmes &amp; réseaux (Orange Business Services)</h3>
-          <ul>
-            <li>Mise en place de VLANs sécurisés et routage inter‑VLAN sur commutateurs Cisco.</li>
-            <li>Durcissement d’une DMZ (pare‑feu ASA) : filtrage, NAT, monitoring.</li>
-            <li>Déploiement d’un serveur GLPI avec inventaire FusionInventory pour le parc interne.</li>
-            <li>Rédaction de procédures (backup, supervision) et formation courte aux équipes.</li>
-            <li>Compétences mobilisées : réseau (BTS), cybersécurité (Google Cert), pentest (CompTIA).</li>
-          </ul>
+        <div class="stage-grid">
+          <div class="stage-card">
+            <h3>Stage 1<sup>ʳᵉ</sup> année – Technicien support informatique</h3>
+            <ul>
+              <li>Résolution de 40+ tickets (Windows &amp; Linux).</li>
+              <li>Déploiement d’images Windows via WDS.</li>
+              <li>Documentation de procédures de sauvegarde poste client.</li>
+            </ul>
+          </div>
+          <div class="stage-card">
+            <h3>Stage 2<sup>ᵉ</sup> année – Assistant admin systèmes &amp; réseaux (Orange)</h3>
+            <ul>
+              <li>Mise en place de VLANs &amp; routage inter‑VLAN sur commutateurs Cisco.</li>
+              <li>Durcissement d’une DMZ ASA : NAT, ACL, monitoring.</li>
+              <li>Déploiement de GLPI + FusionInventory pour le parc interne.</li>
+              <li>Rédaction de guides (backup, supervision) &amp; formation équipe.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <!-- COMPETENCES -->
       <section id="competences">
-        <h2>Compétences &amp; Certifications</h2>
+        <h2 class="title-big">Compétences &amp; Certifications</h2>
         <div class="divider"></div>
         <div class="compet-grid">
-          <div class="compet-card"><img class="compet-logo" src="https://logo.clearbit.com/google.com" alt="Google"><h3 class="compet-title">Google Cybersecurity Certificate</h3><p class="compet-desc">Fondamentaux cybersécurité validés par Google.</p><a href="https://www.coursera.org/account/accomplishments/certificate/2SFA9SBLY1HI" target="_blank" class="btn-secondary">Attestation</a></div>
-          <div class="compet-card"><img class="compet-logo" src="https://logo.clearbit.com/comptia.org" alt="CompTIA"><h3 class="compet-title">CompTIA Pentest+</h3><p class="compet-desc">Méthodologie de test d’intrusion certifiée.</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-LU85GCD9QR.pdf" target="_blank" class="btn-secondary">Attestation</a></div>
-          <div class="compet-card"><img class="compet-logo" src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" alt="TryHackMe"><h3 class="compet-title">TryHackMe – Complete Beginner</h3><p class="compet-desc">Initiation complète (Linux, réseau, web).</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RUALOZJ3I0.pdf" target="_blank" class="btn-secondary">Attestation</a></div>
+          <div class="compet-card"><img class="compet-logo" src="https://logo.clearbit.com/google.com" alt="Google"><h3 class="compet-title">Google Cybersecurity Certificate</h3><p class="compet-desc">Fondamentaux cybersécurité validés par Google.</p><a href="https://www.coursera.org/account/accomplishments/certificate/2SFA9SBLY1HI" target="_blank" class="btn-cert">Attestation</a></div>
+          <div class="compet-card"><img class="compet-logo" src="https://logo.clearbit.com/comptia.org" alt="CompTIA"><h3 class="compet-title">CompTIA Pentest+</h3><p class="compet-desc">Méthodologie de test d’intrusion certifiée.</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-LU85GCD9QR.pdf" target="_blank" class="btn-cert">Attestation</a></div>
+          <div class="compet-card"><img class="compet-logo" src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" alt="TryHackMe"><h3 class="compet-title">TryHackMe – Complete Beginner</h3><p class="compet-desc">Initiation complète (Linux, réseau, web).</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RUALOZJ3I0.pdf" target="_blank" class="btn-cert">Attestation</a></div>
         </div>
       </section>
 
       <!-- DOCUMENTATIONS -->
       <section id="documentations">
-        <h2>Documentations</h2>
+        <h2 class="title-big">Documentations</h2>
         <div class="divider"></div>
         <div class="docs-grid">
-          <!-- chaque carte : image Unsplash + titre -->
-          <a href="Bureau%20a%20distanceREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?remote-desktop" alt=""><span class="doc-label">Bureau à distance</span></a>
-          <a href="Compte-rendu-reseau-complexe-2REFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?network" alt=""><span class="doc-label">Réseau complexe (2)</span></a>
-          <a href="Informatique%20-%20Admin%20linuxREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?linux" alt=""><span class="doc-label">Admin Linux</span></a>
-          <a href="Paramétrage-Route-VlanREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?router" alt=""><span class="doc-label">Route / VLAN</span></a>
-          <a href="SSHREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?ssh" alt=""><span class="doc-label">SSH</span></a>
-          <a href="Serveur-ApacheREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?apache" alt=""><span class="doc-label">Serveur Apache</span></a>
-          <a href="TP%20GLPIREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?helpdesk" alt=""><span class="doc-label">TP GLPI</span></a>
-          <a href="TP-Commandes%20LinuxREFONTE%20.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?terminal" alt=""><span class="doc-label">Cmd Linux</span></a>
-          <a href="TP-Virtualisation%20REFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?virtualization" alt=""><span class="doc-label">TP Virtualisation</span></a>
-          <a href="TP-reseau-complexe-1REFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?cisco" alt=""><span class="doc-label">Réseau complexe (1)</span></a>
-          <a href="TP-serveur-DHCPREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?dhcp" alt=""><span class="doc-label">Serveur DHCP</span></a>
-          <a href="cours-réseauREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?topology" alt=""><span class="doc-label">Cours réseau</span></a>
+          <a href="Bureau%20a%20distanceREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/remote/600/400" alt=""><span class="doc-label">Bureau à distance</span></a>
+          <a href="Compte-rendu-reseau-complexe-2REFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/network2/600/400" alt=""><span class="doc-label">Réseau complexe (2)</span></a>
+          <a href="Informatique%20-%20Admin%20linuxREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/linux/600/400" alt=""><span class="doc-label">Admin Linux</span></a>
+          <a href="Paramétrage-Route-VlanREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/router/600/400" alt=""><span class="doc-label">Route / VLAN</span></a>
+          <a href="SSHREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/ssh/600/400" alt=""><span class="doc-label">SSH</span></a>
+          <a href="Serveur-ApacheREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/apache/600/400" alt=""><span class="doc-label">Serveur Apache</span></a>
+          <a href="TP%20GLPIREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/glpi/600/400" alt=""><span class="doc-label">TP GLPI</span></a>
+          <a href="TP-Commandes%20LinuxREFONTE%20.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/terminal/600/400" alt=""><span class="doc-label">Cmd Linux</span></a>
+          <a href="TP-Virtualisation%20REFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/virtual/600/400" alt=""><span class="doc-label">TP Virtualisation</span></a>
+          <a href="TP-reseau-complexe-1REFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/network1/600/400" alt=""><span class="doc-label">Réseau complexe (1)</span></a>
+          <a href="TP-serveur-DHCPREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/dhcp/600/400" alt=""><span class="doc-label">Serveur DHCP</span></a>
+          <a href="cours-réseauREFONTE.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/topology/600/400" alt=""><span class="doc-label">Cours réseau</span></a>
         </div>
       </section>
 
       <!-- E5 -->
       <section id="e5">
-        <h2>Épreuve E5</h2>
+        <h2 class="title-big">Épreuve E5</h2>
         <div class="divider"></div>
         <p style="max-width:60rem;margin:0 auto 2rem;line-height:1.6;">
-          <strong>ÉPREUVE E5 – SUPPORT ET MISE À DISPOSITION DE SERVICES INFORMATIQUES</strong><br><br>
-          <em>Objectif</em> : évaluer les compétences — gestion du patrimoine, support, présence en ligne,
-          travail en mode projet, mise à disposition de services et développement professionnel.<br><br>
-          <em>Modalités</em> : forme ponctuelle orale (40 min) : 10 min de présentation du parcours,
-          suivies de 30 min d’échange approfondissant une ou plusieurs réalisations.
+          <strong>ÉPREUVE E5 – Support et mise à disposition de services informatiques</strong><br><br>
+          Objectif : gérer le patrimoine, répondre aux incidents, développer la présence en ligne,
+          travailler en mode projet, mettre des services à disposition, organiser son développement
+          pro.<br><br>
+          Modalités : 10 min de présentation du parcours + 30 min d’échange avec le jury.
         </p>
-        <div class="docs-grid">
-          <a href="Tableau%20de%20synthèse%20-%20Epreuve%20E- BTS%20SIO%202023.pdf" class="doc-card" target="_blank">
-            <img class="doc-thumb" src="https://source.unsplash.com/600x400/?spreadsheet" alt="">
-            <span class="doc-label">Tableau de synthèse E5</span>
-          </a>
+        <div class="docs-grid" style="justify-content:center;">
+          <a href="Tableau%20de%20synthèse%20-%20Epreuve%20E- BTS%20SIO%202023.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/table/600/400" alt=""><span class="doc-label">Tableau de synthèse E5</span></a>
         </div>
       </section>
 
       <!-- E6 -->
       <section id="e6">
-        <h2>Épreuve E6</h2>
+        <h2 class="title-big">Épreuve E6</h2>
         <div class="divider"></div>
         <p style="max-width:60rem;margin:0 auto 2rem;line-height:1.6;">
-          <strong>ÉPREUVE E6 – Administration des systèmes et des réseaux (Option SISR)</strong><br><br>
-          <em>Objectif</em> : valider la conception, le déploiement et la supervision d’une
-          infrastructure réseau.<br><br>
-          <em>Modalités</em> : deux phases pratiques + orales (40 min, 1h30 de préparation totale).<br><br>
-          <strong>Projets présentés :</strong><br>
-          <u>Projet 1 — Active Directory DS</u> : déploiement de deux contrôleurs de domaine,
-          création des utilisateurs et GPO, partage sécurisé des ressources.<br><br>
-          <u>Projet 2 — GLPI + FusionInventory</u> : service de gestion de parc &amp; help‑desk,
-          inventaire automatisé, gestion des tickets et contrats.
+          <strong>ÉPREUVE E6 – Option SISR : Administration des systèmes &amp; réseaux</strong><br><br>
+          Objectif : concevoir, déployer, exploiter et superviser une infrastructure réseau.<br>
+          Modalités : 2 phases pratiques + orales (1h30 préparation, 40 min d’entretien).<br><br>
+          <u>Projet 1 — Active Directory DS</u> : 2 DC redondants (172.16.2.245/246), GPO, accès
+          sécurisés.<br>
+          <u>Projet 2 — GLPI + FusionInventory</u> : gestion de parc &amp; help‑desk (172.16.2.247).
         </p>
         <div class="docs-grid">
-          <a href="Fiche%20Descriptive%20AD%20DS%20E6%20MEHDI%20TAMIRO.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?active-directory" alt=""><span class="doc-label">Fiche AD DS</span></a>
-          <a href="Fiche%20descriptive%20GLPI%20E6%20TAMIRO%20MEHDI.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?glpi" alt=""><span class="doc-label">Fiche GLPI</span></a>
-          <a href="doc-technique-projet-1-1-1.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?documentation" alt=""><span class="doc-label">Doc technique</span></a>
-          <a href="glpi%20doc%20autre.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://source.unsplash.com/600x400/?inventory" alt=""><span class="doc-label">Doc GLPI fusion</span></a>
+          <a href="Fiche%20Descriptive%20AD%20DS%20E6%20MEHDI%20TAMIRO.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/adds/600/400" alt=""><span class="doc-label">Fiche AD DS</span></a>
+          <a href="Fiche%20descriptive%20GLPI%20E6%20TAMIRO%20MEHDI.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/glpi2/600/400" alt=""><span class="doc-label">Fiche GLPI</span></a>
+          <a href="doc-technique-projet-1-1-1.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/doc1/600/400" alt=""><span class="doc-label">Doc technique</span></a>
+          <a href="glpi%20doc%20autre.pdf" class="doc-card" target="_blank"><img class="doc-thumb" src="https://picsum.photos/seed/doc2/600/400" alt=""><span class="doc-label">Doc GLPI fusion</span></a>
         </div>
       </section>
 
       <!-- VEILLE TECHNO -->
       <section id="veille">
-        <h2>Veille technologique</h2>
+        <h2 class="title-big">Veille technologique</h2>
         <div class="divider"></div>
-        <article style="max-width:70rem;margin:0 auto;line-height:1.7;font-size:1.05rem;">
+        <article style="max-width:70rem;margin:0 auto;line-height:1.7;font-size:1.05rem;text-align:left;">
           <h3 style="text-align:center;font-size:1.6rem;font-weight:700;margin-bottom:.8rem;">
-            Comment l’IA générative transforme la cybersécurité (Étude 2025, Google DeepMind)
+            IA générative : un atout et un défi pour la cybersécurité (Google DeepMind 2025)
           </h3>
           <p>
-            L’étude publiée par Google DeepMind démontre que les modèles d’IA générative permettent
-            désormais de détecter des schémas d’attaque 35 % plus tôt que les systèmes SIEM
-            traditionnels, grâce à l’analyse simultanée de logs multi‑sources et au raisonnement
-            contextuel. Les SOC qui ont intégré cette technologie ont réduit leur temps moyen de
-            réponse (MTTR) de 48 % en six mois. Cependant, l’étude souligne également le risque
-            d’<em>hallucinations</em> décisionnelles ; une supervision humaine et des ensembles
-            d’entraînement spécialisés restent indispensables. <br>
+            Les modèles d’IA générative détectent désormais les comportements d’attaque 35 % plus tôt
+            que les SIEM classiques, réduisant le MTTR de 48 %. L’étude souligne toutefois les risques
+            d’hallucination de corrélation : l’expertise humaine reste indispensable.<br><br>
             <a href="https://deepmind.google/discover/blog/generative-ai-cybersecurity-2025" target="_blank">
               Lire l’article complet
             </a>
