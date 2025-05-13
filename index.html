@@ -1,57 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Portfolio – Mehdi TAMIRO</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Portfolio – Mehdi TAMIRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    /* ========== BASE ========== */
+    /* RESET & BASE */
     *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
     body{background:#f9fafb;color:#1f2937;}
-    a{text-decoration:none}
-    .layout{min-height:100vh;display:flex;}
+    a{text-decoration:none;color:inherit}
 
+    /* LAYOUT */
+    .layout{min-height:100vh;display:flex;}
     section{padding:4rem 0;text-align:center;}
     .divider{width:4rem;height:2px;background:#000;margin:1rem auto;}
 
-    /* ========== SIDEBAR ========== */
-    .sidebar{width:16rem;height:100vh;position:fixed;top:0;left:0;background:linear-gradient(#111827,#1f2937);color:#fff;padding:1.5rem;display:flex;flex-direction:column;border-top-right-radius:1.5rem;border-bottom-right-radius:1.5rem;box-shadow:0 0 10px rgba(0,0,0,.3);}
+    /* SIDEBAR */
+    .sidebar{width:16rem;position:fixed;height:100%;background:linear-gradient(#111827,#1f2937);color:#fff;padding:1.5rem;display:flex;flex-direction:column;border-top-right-radius:1.5rem;border-bottom-right-radius:1.5rem;box-shadow:0 0 10px rgba(0,0,0,.3);}
     .sidebar-title{text-align:center;font-size:1.5rem;font-weight:600;margin-bottom:1rem;}
     .sidebar-title .accent{color:#60a5fa;}
-    .nav-links{display:flex;flex-direction:column;gap:.75rem;margin-top:.5rem;}
+    .nav-links{display:flex;flex-direction:column;gap:.8rem;}
     .nav-btn{padding:.4rem .6rem;border-radius:.35rem;font-size:1rem;color:#fff;transition:background .25s;}
     .nav-btn:hover{background:#374151;}
-    .footer-text{margin-top:auto;font-size:.8rem;text-align:center;color:#9ca3af;}
+    .footer-text{margin-top:auto;text-align:center;font-size:.8rem;color:#9ca3af;}
 
-    /* ========== MAIN ========== */
+    /* CONTENT */
     .content{margin-left:16rem;width:calc(100% - 16rem);padding:2rem;}
 
     /* HERO */
     #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.3rem;}
+    .btn-main{background:linear-gradient(90deg,#3b82f6,#8b5cf6);color:#fff;padding:.75rem 1.5rem;border-radius:.6rem;font-size:1rem;box-shadow:0 2px 6px rgba(0,0,0,.18);}
     .hero-sub{font-size:3rem;font-weight:700;}
     .hero-title{font-size:3.5rem;font-weight:800;}
     .hero-accroche{font-size:1.8rem;font-weight:600;}
-    .btn-main{background:linear-gradient(90deg,#3b82f6,#8b5cf6);color:#fff;padding:.75rem 1.5rem;border-radius:.6rem;font-size:1rem;box-shadow:0 2px 6px rgba(0,0,0,.18);}
 
     /* COMPETENCES */
     .compet-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;max-width:80rem;margin:3rem auto;}
     .compet-card{width:260px;background:#fff;border-radius:.75rem;box-shadow:0 4px 8px rgba(0,0,0,.12);padding:2rem;display:flex;flex-direction:column;align-items:center;gap:1rem;}
     .compet-logo{width:72px;height:72px;}
     .compet-title{font-size:1.1rem;font-weight:700;text-align:center;}
-    .compet-desc{font-size:.88rem;color:#374151;text-align:center;line-height:1.4;}
-    .btn-cert{background:#6366f1;color:#fff;padding:.45rem 1rem;border-radius:.35rem;font-size:.9rem;}
+    .compet-desc{font-size:.9rem;text-align:center;color:#374151;}
+    .btn-cert{background:#6366f1;color:#fff;padding:.45rem 1rem;border-radius:.35rem;font-size:.85rem;}
 
-    /* DOC GRID */
+    /* DOCS GRID */
     .docs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem;max-width:1000px;margin:2rem auto;}
-    .doc-card{background:#fff;border-radius:.65rem;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.12);display:flex;flex-direction:column;color:#1f2937;}
+    .doc-card{background:#fff;border-radius:.65rem;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.12);display:flex;flex-direction:column;}
     .doc-thumb{width:100%;height:160px;object-fit:cover;}
     .doc-label{padding:1rem;font-weight:600;font-size:1rem;}
 
-    /* STAGES (exemple) */
-    .stage-grid{display:grid;gap:2rem;max-width:80rem;margin:0 auto;}
-    .stage-card{background:#fff;border-radius:.65rem;box-shadow:0 2px 6px rgba(0,0,0,.15);padding:2rem;text-align:left;line-height:1.6;}
-
-    /* generic paragraph centering */
+    /* GENERIC paragraph centering */
     section p:not(.stage-card p){text-align:center;line-height:1.6;}
   </style>
 </head>
@@ -74,34 +71,19 @@
   <main class="content">
     <!-- HERO -->
     <section id="hero">
-      <a class="btn-main" href="CV_Mehdi_TAMIRO_Efrei_20250510 (1).pdf" target="_blank">Mon CV</a>
+      <a class="btn-main" href="CV_Mehdi_TAMIRO_Efrei_20250510%20(1).pdf" target="_blank">Mon CV</a>
       <h2 class="hero-sub">BONJOUR</h2>
       <h1 class="hero-title">Je m’appelle Mehdi TAMIRO</h1>
       <h3 class="hero-accroche">Étudiant en BTS SIO SISR à EFREI Paris</h3>
     </section>
 
-    <!-- COMPETENCES -->
+    <!-- COMPÉTENCES -->
     <section id="competences">
       <h2 class="divider">Compétences &amp; Certifications</h2>
       <div class="compet-grid">
-        <div class="compet-card">
-          <img class="compet-logo" src="https://logo.clearbit.com/google.com" alt="Google">
-          <h3 class="compet-title">Google Cybersecurity Certificate</h3>
-          <p class="compet-desc">Fondamentaux cybersécurité.</p>
-          <a class="btn-cert" href="#">Attestation</a>
-        </div>
-        <div class="compet-card">
-          <img class="compet-logo" src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" alt="TryHackMe logo">
-          <h3 class="compet-title">CompTIA Pentest+<br>(formation TryHackMe)</h3>
-          <p class="compet-desc">Méthodologie de test d’intrusion.</p>
-          <a class="btn-cert" href="#">Attestation</a>
-        </div>
-        <div class="compet-card">
-          <img class="compet-logo" src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" alt="TryHackMe logo">
-          <h3 class="compet-title">TryHackMe – Complete Beginner</h3>
-          <p class="compet-desc">(formation TryHackMe)</p>
-          <a class="btn-cert" href="#">Attestation</a>
-        </div>
+        <div class="compet-card"><img src="https://logo.clearbit.com/google.com" class="compet-logo"><h3 class="compet-title">Google Cybersecurity Certificate</h3><p class="compet-desc">Fondamentaux cybersécurité.</p><a class="btn-cert" href="#">Attestation</a></div>
+        <div class="compet-card"><img src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" class="compet-logo"><h3 class="compet-title">CompTIA Pentest+<br>(formation TryHackMe)</h3><p class="compet-desc">Méthodologie pentest.</p><a class="btn-cert" href="#">Attestation</a></div>
+        <div class="compet-card"><img src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" class="compet-logo"><h3 class="compet-title">TryHackMe – Complete Beginner</h3><p class="compet-desc">(formation TryHackMe)</p><a class="btn-cert" href="#">Attestation</a></div>
       </div>
     </section>
 
@@ -109,78 +91,98 @@
     <section id="documentations">
       <h2 class="divider">Documentations</h2>
       <div class="docs-grid">
-        <a class="doc-card" href="Bureau a distanceREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1556767576-cf21cbf77f74?fit=crop&w=600&q=60"><span class="doc-label">Bureau à distance</span></a>
-        <a class="doc-card" href="Compte-rendu-reseau-complexe-2REFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?fit=crop&w=600&q=60"><span class="doc-label">Réseau complexe (2)</span></a>
+        <a class="doc-card" href="Bureau a distanceREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1556767576-cf21cbf77f74?fit=crop&w=600&q=60"><span class="doc-label">Bureau à distance</span></a>
+        <a class="doc-card" href="Compte-rendu-reseau-complexe-2REFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?fit=crop&w=600&q=60"><span class="doc-label">Réseau complexe (2)</span></a>
         <a class="doc-card" href="Informatique - Admin linuxREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1518770660439-4636190af475?fit=crop&w=600&q=60"><span class="doc-label">Admin Linux</span></a>
-        <a class="doc-card" href="Paramétrage-Route-VlanREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1553490245-46a7d122fdf5?fit=crop&w=600&q=60"><span class="doc-label">Route / VLAN</span></a>
+        <a class="doc-card" href="Paramétrage-Route-VlanREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1553490245-46a7d122fdf5?fit=crop&w=600&q=60"><span class="doc-label">Route / VLAN</span></a>
         <a class="doc-card" href="SSHREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?fit=crop&w=600&q=60"><span class="doc-label">SSH</span></a>
-        <a class="doc-card" href="Serveur-ApacheREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1560472354-274af1124c16?fit=crop&w=600&q=60"><span class="doc-label">Serveur Apache</span></a>
-        <a class="doc-card" href="TP GLPIREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1603354558481-057aa6c8460b?fit=crop&w=600&q=60"><span class="doc-label">TP GLPI</span></a>
-        <a class="doc-card" href="TP-Commandes LinuxREFONTE .pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?fit=crop&w=600&q=60"><span class="doc-label">Cmd Linux</span></a>
+        <a class="doc-card" href="Serveur-ApacheREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1560472354-274af1124c16?fit=crop&w=600&q=60"><span class="doc-label">Serveur Apache</span></a>
+        <a class="doc-card" href="TP GLPIREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1603354558481-057aa6c8460b?fit=crop&w=600&q=60"><span class="doc-label">TP GLPI</span></a>
+        <a class="doc-card" href="TP-Commandes LinuxREFONTE .pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?fit=crop&w=600&q=60"><span class="doc-label">Cmd Linux</span></a>
         <a class="doc-card" href="TP-Virtualisation REFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?fit=crop&w=600&q=60"><span class="doc-label">Virtualisation</span></a>
-        <a class="doc-card" href="TP-reseau-complexe-1REFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1558888401-b2cb22ad0f77?fit=crop&w=600&q=60"><span class="doc-label">Réseau complexe (1)</span></a>
-        <a class="doc-card" href="TP-serveur-DHCPREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?fit=crop&w=600&q=60"><span class="doc-label">Serveur DHCP</span></a>
-        <a class="doc-card" href="cours-réseauREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1581091012184-77e2f2222999?fit=crop&w=600&q=60"><span class="doc-label">Cours réseau</span></a>
+        <a class="doc-card" href="TP-reseau-complexe-1REFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1558888401-b2cb22ad0f77?fit=crop&w=600&q=60"><span class="doc-label">Réseau complexe (1)</span></a>
+        <a class="doc-card" href="TP-serveur-DHCPREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?fit=crop&w=600&q=60"><span class="doc-label">Serveur DHCP</span></a>
+        <a class="doc-card" href="cours-réseauREFONTE.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1581091012184-77e2f2222999?fit=crop&w=600&q=60"><span class="doc-label">Cours réseau</span></a>
       </div>
     </section>
 
-    <!-- ÉPREUVE E5 -->
+    <!-- ÉPREUVE E5 -->
     <section id="e5">
       <h2 class="divider">Épreuve E5</h2>
+
       <article style="max-width:75rem;margin:0 auto;text-align:left;font-size:1rem;line-height:1.7;">
         <h3>ÉPREUVE E5 – SUPPORT ET MISE À DISPOSITION DE SERVICES INFORMATIQUES</h3>
 
         <h4>1 – Objectif</h4>
-        <p>Cette épreuve vise à évaluer l’acquisition des compétences décrites dans le bloc « Support et mise à disposition de services informatiques » :</p>
+        <p>Cette épreuve vise à évaluer chez la personne candidate l’acquisition des compétences décrites dans le bloc de compétences « Support et mise à disposition de services informatiques », à savoir :</p>
         <ul>
-          <li>Gérer le patrimoine informatique ;</li>
-          <li>Répondre aux incidents et demandes d’assistance et d’évolution ;</li>
-          <li>Développer la présence en ligne de l’organisation ;</li>
-          <li>Travailler en mode projet ;</li>
-          <li>Mettre à disposition des utilisateurs un service informatique ;</li>
+          <li>Gérer le patrimoine informatique ;</li>
+          <li>Répondre aux incidents et demandes d’assistance et d’évolution ;</li>
+          <li>Développer la présence en ligne de l’organisation ;</li>
+          <li>Travailler en mode projet ;</li>
+          <li>Mettre à disposition des utilisateurs un service informatique ;</li>
           <li>Organiser son développement professionnel.</li>
         </ul>
 
-        <h4>2 – Modalités d’évaluation : forme ponctuelle orale (40 min)</h4>
+        <h4>2 – Modalités d’évaluation : forme ponctuelle orale (durée 40 minutes)</h4>
+        <p>L’épreuve comporte deux phases consécutives :</p>
         <ul>
-          <li>10 min : présentation du parcours de professionnalisation.</li>
-          <li>30 min : échange avec le jury pour approfondir les réalisations du dossier numérique.</li>
-          <li>L’entretien permet d’apprécier la capacité à travailler en équipe et à rendre compte d’un projet.</li>
+          <li>Pendant 10 minutes (maximum) la personne candidate présente son parcours de professionnalisation et justifie les modalités d’acquisition des compétences visées.</li>
+          <li>S’ensuivent 30 minutes d’échange avec le jury pour expliciter et approfondir les réalisations décrites dans le dossier numérique.</li>
         </ul>
+        <p>L’entretien permet d’apprécier la capacité de la personne candidate à mobiliser les compétences, à rendre compte d’un travail en équipe et à mettre en évidence sa contribution personnelle.</p>
       </article>
 
-      <!-- Visualisation directe du PDF -->
-      <embed src="Tableau de synthèse - Epreuve E- BTS SIO 2025.pdf" type="application/pdf" width="100%" height="850px" style="margin-top:2rem;border-radius:.6rem;box-shadow:0 2px 6px rgba(0,0,0,.15);" />
+      <!-- Carte PDF + embed -->
+      <div class="docs-grid" style="margin-top:2rem;">
+        <a class="doc-card" href="Tableau de synthèse - Epreuve E- BTS SIO 2025.pdf"><img class="doc-thumb" src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?fit=crop&w=600&q=60"><span class="doc-label">Tableau de synthèse</span></a>
+      </div>
+      <embed src="Tableau de synthèse - Epreuve E- BTS SIO 2025.pdf" type="application/pdf" width="100%" height="850px" style="margin-top:1.5rem;border-radius:.6rem;box-shadow:0 2px 6px rgba(0,0,0,.15);" />
     </section>
 
-    <!-- ÉPREUVE E6 -->
+    <!-- ÉPREUVE E6 -->
     <section id="e6">
       <h2 class="divider">Épreuve E6</h2>
+
       <article style="max-width:75rem;margin:0 auto;text-align:left;font-size:1rem;line-height:1.7;">
         <h3>ÉPREUVE E6 – OPTION « SOLUTIONS D’INFRASTRUCTURE, SYSTÈMES ET RÉSEAUX »<br>ADMINISTRATION DES SYSTÈMES ET DES RÉSEAUX</h3>
 
         <h4>1 – Objectif</h4>
-        <p>Évaluer les compétences du bloc « Administration des systèmes et des réseaux » :</p>
+        <p>Cette épreuve vise à évaluer chez la personne candidate l’acquisition des compétences du bloc « Administration des systèmes et des réseaux » :</p>
         <ul>
           <li>Concevoir une solution d’infrastructure réseau ;</li>
-          <li>Installer, tester et déployer cette solution ;</li>
-          <li>Exploiter, dépanner et superviser l’infrastructure.</li>
+          <li>Installer, tester et déployer une solution d’infrastructure réseau ;</li>
+          <li>Exploiter, dépanner et superviser une infrastructure réseau.</li>
         </ul>
 
         <h4>2 – Modalités d’évaluation</h4>
-        <p>Basée sur deux réalisations professionnelles figurant dans le dossier du candidat.</p>
+        <p>L’épreuve prend appui sur deux réalisations professionnelles figurant dans le dossier ; elles mobilisent les ressources du référentiel pour ce bloc.</p>
 
-        <h4>3 – Forme ponctuelle pratique et orale : 40 min (+ 1 h 30 de préparation)</h4>
+        <h4>3 – Forme ponctuelle pratique et orale : 40 min (+ 1 h 30 de préparation)</h4>
         <ul>
-          <li>Phase 1 : 30 min de préparation + 20 min d’entretien sur une expression de besoins.</li>
-          <li>Phase 2 : 1 h de préparation individuelle + 20 min d’entretien sur la réalisation.</li>
+          <li><strong>Phase 1</strong> – préparation 30 min puis entretien 20 min : analyse d’une expression de besoins.</li>
+          <li><strong>Phase 2</strong> – préparation 1 h puis entretien 20 min : réalisation individuelle en autonomie.</li>
         </ul>
 
         <h4>Projet 1 : Mise en place et configuration d’Active Directory DS (M2L)</h4>
-        <p>Centralisation des utilisateurs/ressources via deux DC (172.16.2.245 & .246) : installation, création d’utilisateurs, application des GPO, accès partagés, validation et documentation.</p>
+        <p>Objectif : centraliser la gestion (DC 172.16.2.245 &amp; .246), stratégies de groupe, ressources partagées.</p>
+        <ol>
+          <li>Installation et configuration des contrôleurs de domaine</li>
+          <li>Création et gestion des utilisateurs et groupes</li>
+          <li>Application des stratégies de groupe (GPO)</li>
+          <li>Configuration des accès et ressources partagées</li>
+          <li>Validation et documentation</li>
+        </ol>
 
         <h4>Projet 2 : Déploiement de GLPI avec FusionInventory</h4>
-        <p>Gestion de parc et tickets : installation GLPI (172.16.2.247), configuration utilisateurs/droits, mise en place des tickets, intégration FusionInventory, inventaire automatique, documentation complète.</p>
+        <p>Objectif : help‑desk et inventaire automatisé (GLPI 172.16.2.247).</p>
+        <ol>
+          <li>Installation de GLPI &amp; base MariaDB</li>
+          <li>Configuration des utilisateurs et droits d’accès</li>
+          <li>Mise en place du système de gestion des tickets</li>
+          <li>Ajout des matériels, utilisateurs et contrats</li>
+          <li>Intégration FusionInventory pour l’inventaire automatique</li>
+        </ol>
       </article>
 
       <div class="docs-grid" style="margin-top:2rem;">
@@ -191,10 +193,10 @@
       </div>
     </section>
 
-    <!-- Veille (court) -->
+    <!-- VEILLE -->
     <section id="veille">
       <h2 class="divider">Veille technologique</h2>
-      <p>IA générative : -48 % sur le MTTR dans les SOC (Google DeepMind 2025).</p>
+      <p>IA générative : –48 % sur le MTTR dans les SOC (Google DeepMind 2025).</p>
     </section>
   </main>
 </div>
