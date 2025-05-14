@@ -36,11 +36,12 @@
     /* ===== PARCOURS ===== */
     .parcours-container{position:relative;max-width:80rem;margin:2rem auto;padding-left:2.5rem;}
     .parcours-container::before{content:"";position:absolute;left:1.2rem;top:0;bottom:0;width:2px;background:#d1d5db;}
-    .parcours-item{display:flex;gap:1rem;margin-bottom:2rem;align-items:flex-start;}
-    .year-block{min-width:7rem;background:#4b5563;color:#fff;text-align:center;padding:.5rem;border-radius:.55rem;font-weight:700;}
+    .parcours-item{display:flex;gap:1rem;margin-bottom:2rem;align-items:flex-start;transition:transform .25s;}
+    .parcours-item:hover{transform:translateY(-3px);}
+    .year-block{min-width:7rem;color:#fff;text-align:center;padding:.5rem;border-radius:.55rem;font-weight:700;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.15);}
     .pink-bg{background:#ec4899;} .yellow-bg{background:#f59e0b;}
     .gray-bg{background:#4b5563;} .green-bg{background:#10b981;}
-    .desc{flex:1;background:#fff;padding:1rem;border-radius:.55rem;box-shadow:0 2px 4px rgba(0,0,0,.1);text-align:left;}
+    .desc{flex:1;background:#fff;padding:1rem;border-radius:.55rem;box-shadow:0 2px 4px rgba(0,0,0,.1);text-align:left;border-left:4px solid #3b82f6;}
     .desc-title{font-weight:700;margin-bottom:.3rem;}
 
     /* ===== BTS WRAPPER ===== */
@@ -153,7 +154,7 @@
           <h3>Stage 1ʳᵉ année – Développeur back‑end</h3>
           <ul>
             <li>Création d’une base de données et d’une API REST pour une appli de suivi sportif.</li>
-            <li>Mise au point des routes, tests Postman, correction de bugs.</li>
+            <li>Mise au point des routes, tests via Postman, correction de bugs.</li>
             <li>Documentation du projet.</li>
           </ul>
           <a href="Cahier%20des%20charges%20–%20Stage%20de%201ʳᵉ%20année.pdf" class="btn-main" target="_blank" rel="noopener" style="margin-top:.7rem;">Cahier des charges</a>
@@ -163,7 +164,7 @@
           <ul>
             <li>Support utilisateurs, maintenance postes et réseau local.</li>
             <li>Sécurisation, mises à jour, sensibilisation.</li>
-            <li>Suggestions d’améliorations réseau.</li>
+            <li>Propositions d’améliorations réseau.</li>
           </ul>
           <a href="Cahier%20des%20charges%20–%20Stage%20de%202ᵉ%20année.pdf" class="btn-main" target="_blank" rel="noopener" style="margin-top:.7rem;">Cahier des charges</a>
         </div>
@@ -174,9 +175,9 @@
     <section id="competences">
       <h2 class="title-big">Compétences & Certifications</h2><div class="divider"></div>
       <div class="compet-grid">
-        <div class="compet-card"><img class="compet-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Logo Google"><h3 class="compet-title">Google Cybersecurity Certificate</h3><p class="compet-desc">Fondamentaux cybersécurité.</p><a href="https://www.coursera.org/account/accomplishments/certificate/2SFA9SBLY1HI" target="_blank" class="btn-cert" rel="noopener">Attestation</a></div>
-        <div class="compet-card"><img class="compet-logo" src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" alt="Logo TryHackMe"><h3 class="compet-title">CompTIA Pentest+<br>(TryHackMe)</h3><p class="compet-desc">Méthodo pentest certifiée.</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-LU85GCD9QR.pdf" target="_blank" class="btn-cert" rel="noopener">Attestation</a></div>
-        <div class="compet-card"><img class="compet-logo" src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" alt="Logo TryHackMe"><h3 class="compet-title">TryHackMe – Complete Beginner</h3><p class="compet-desc">Linux, réseau, web.</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RUALOZJ3I0.pdf" target="_blank" class="btn-cert" rel="noopener">Attestation</a></div>
+        <div class="compet-card"><img class="compet-logo" src="google-certif.png" alt="Google Cybersecurity Certificate"><h3 class="compet-title">Google Cybersecurity Certificate</h3><p class="compet-desc">Fondamentaux cybersécurité.</p><a href="https://www.coursera.org/account/accomplishments/certificate/2SFA9SBLY1HI" target="_blank" class="btn-cert" rel="noopener">Attestation</a></div>
+        <div class="compet-card"><img class="compet-logo" src="channels4_profile.jpg" alt="TryHackMe"><h3 class="compet-title">CompTIA Pentest+<br>(TryHackMe)</h3><p class="compet-desc">Méthodo pentest certifiée.</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-LU85GCD9QR.pdf" target="_blank" class="btn-cert" rel="noopener">Attestation</a></div>
+        <div class="compet-card"><img class="compet-logo" src="channels4_profile.jpg" alt="TryHackMe"><h3 class="compet-title">TryHackMe – Complete Beginner</h3><p class="compet-desc">Linux, réseau, web.</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RUALOZJ3I0.pdf" target="_blank" class="btn-cert" rel="noopener">Attestation</a></div>
       </div>
     </section>
 
@@ -202,65 +203,53 @@
     <!-- ÉPREUVE E5 -->
     <section id="e5">
       <h2 class="title-big">Épreuve E5</h2><div class="divider"></div>
-
-      <article style="max-width:70rem;margin:0 auto 2rem;line-height:1.7;font-size:1.05rem;text-align:left;">
-        <h3 style="text-align:center;font-size:1.6rem;font-weight:700;margin-bottom:.8rem">ÉPREUVE E5 – SUPPORT ET MISE À DISPOSITION DE SERVICES INFORMATIQUES</h3>
-        <h4>1 - OBJECTIF</h4>
-        <p>Cette épreuve vise à évaluer chez la personne candidate l’acquisition des compétences décrites dans le bloc « Support et mise à disposition de services informatiques », à savoir :</p>
-        <ul style="list-style:disc;padding-left:1.5rem;line-height:1.6;">
-          <li>Gérer le patrimoine informatique ;</li>
-          <li>Répondre aux incidents et demandes d’assistance et d’évolution ;</li>
-          <li>Développer la présence en ligne de l’organisation ;</li>
-          <li>Travailler en mode projet ;</li>
-          <li>Mettre à disposition des utilisateurs un service informatique ;</li>
-          <li>Organiser son développement professionnel.</li>
+      <article style="max-width:70rem;margin:0 auto 2rem;text-align:left;font-size:1.05rem;line-height:1.7;">
+        <h3 style="text-align:center;font-size:1.6rem;font-weight:700;margin-bottom:.8rem">ÉPREUVE E5 – SUPPORT ET MISE À DISPOSITION DE SERVICES INFORMATIQUES</h3>
+        <h4>1 - OBJECTIF</h4>
+        <p>Cette épreuve vise à évaluer chez la personne candidate l’acquisition des compétences décrites dans le bloc de compétences « Support et mise à disposition de services informatiques », à savoir :</p>
+        <ul style="list-style:disc;padding-left:1.4rem;">
+          <li>Gérer le patrimoine informatique</li>
+          <li>Répondre aux incidents et demandes d’assistance et d’évolution</li>
+          <li>Développer la présence en ligne de l’organisation</li>
+          <li>Travailler en mode projet</li>
+          <li>Mettre à disposition des utilisateurs un service informatique</li>
+          <li>Organiser son développement professionnel</li>
         </ul>
-        <h4 style="margin-top:1.2rem;">2 - MODALITÉS D'ÉVALUATION : FORME PONCTUELLE ORALE (40 MINUTES)</h4>
-        <p>10 minutes maximum de présentation du parcours de professionnalisation, puis 30 minutes d’échange avec le jury afin d’expliciter les réalisations et d’apprécier la capacité à mobiliser les compétences.</p>
+        <h4 style="margin-top:1.2rem;">2 - MODALITÉS D'ÉVALUATION : FORME PONCTUELLE ORALE (40 MINUTES)</h4>
+        <p>L'épreuve comporte deux phases :</p>
+        <ol style="padding-left:1.4rem;">
+          <li>10 minutes maximum de présentation du parcours de professionnalisation.</li>
+          <li>30 minutes d’échange avec le jury permettant d’expliciter le parcours et d’approfondir une ou plusieurs réalisations.</li>
+        </ol>
       </article>
-
       <embed src="Tableau%20de%20synth%C3%A8se%20-%20Epreuve%20E-%20BTS%20SIO%202025.pdf" type="application/pdf" width="100%" height="700px">
     </section>
 
     <!-- ÉPREUVE E6 -->
     <section id="e6">
       <h2 class="title-big">Épreuve E6</h2><div class="divider"></div>
-
-      <article style="max-width:70rem;margin:0 auto 2rem;line-height:1.7;font-size:1.05rem;text-align:left;">
-        <h3 style="text-align:center;font-size:1.6rem;font-weight:700;margin-bottom:.8rem">ÉPREUVE E6 – OPTION SISR : ADMINISTRATION DES SYSTÈMES &amp; RÉSEAUX</h3>
-        <h4>1 - OBJECTIF</h4>
-        <p>Évaluer le bloc « Administration des systèmes et des réseaux » :</p>
-        <ul style="list-style:disc;padding-left:1.5rem;line-height:1.6;">
-          <li>Concevoir une solution d’infrastructure réseau ;</li>
-          <li>Installer, tester et déployer une solution d’infrastructure réseau ;</li>
-          <li>Exploiter, dépanner et superviser une infrastructure réseau.</li>
+      <article style="max-width:72rem;margin:0 auto 2rem;text-align:left;font-size:1.05rem;line-height:1.7;">
+        <h3 style="text-align:center;font-size:1.6rem;font-weight:700;margin-bottom:.8rem">ÉPREUVE E6 – OPTION SISR : ADMINISTRATION DES SYSTÈMES & RÉSEAUX</h3>
+        <h4>1 - OBJECTIF</h4>
+        <p>Évaluer l’acquisition des compétences du bloc « Administration des systèmes et des réseaux » :</p>
+        <ul style="list-style:disc;padding-left:1.4rem;">
+          <li>Concevoir une solution d’infrastructure réseau</li>
+          <li>Installer, tester et déployer une solution d’infrastructure réseau</li>
+          <li>Exploiter, dépanner et superviser une infrastructure réseau</li>
         </ul>
-
-        <h4 style="margin-top:1.2rem;">2 - MODALITÉS D'ÉVALUATION</h4>
-        <p>L’épreuve s’appuie sur deux réalisations professionnelles remises dans le dossier.</p>
-
-        <h4 style="margin-top:1.2rem;">3 - FORME PRATIQUE &amp; ORALE : 40 MIN (+1H30 DE PRÉPARATION)</h4>
-        <p>Deux phases successives de préparation puis d’entretien autour d’une expression de besoins et de la réalisation pratique.</p>
-
-        <h4 style="margin-top:1.2rem;">Projet 1 – Active Directory DS</h4>
-        <p>Deux contrôleurs de domaine (172.16.2.245 / .246) assurent la redondance et la sécurisation des authentifications. Mise en place des GPO, ressources partagées et tests.</p>
-        <ul style="list-style:disc;padding-left:1.5rem;line-height:1.6;">
-          <li>Installation &amp; configuration des DC</li>
-          <li>Création des utilisateurs &amp; groupes</li>
-          <li>Application des GPO</li>
-          <li>Configuration des partages &amp; vérifications</li>
+        <h4 style="margin-top:1.2rem;">2 - MODALITÉS D'ÉVALUATION</h4>
+        <p>L’épreuve s’appuie sur deux réalisations professionnelles du dossier de la personne candidate.</p>
+        <h4 style="margin-top:1.2rem;">3 - FORME PONCTUELLE : PRATIQUE & ORALE – 40 MIN (+1h30 de préparation)</h4>
+        <ul style="list-style:disc;padding-left:1.4rem;">
+          <li>Phase 1 : préparation 30 min + entretien 20 min (expression de besoins)</li>
+          <li>Phase 2 : préparation 1 h + entretien 20 min (réalisation autonome)</li>
         </ul>
-
-        <h4 style="margin-top:1.2rem;">Projet 2 – GLPI + FusionInventory</h4>
-        <p>Déploiement d’un serveur GLPI (172.16.2.247) avec inventaire automatique ; gestion des tickets et suivi du parc.</p>
-        <ul style="list-style:disc;padding-left:1.5rem;line-height:1.6;">
-          <li>Installation de GLPI + MariaDB</li>
-          <li>Paramétrage des droits &amp; utilisateurs</li>
-          <li>Mise en place du système de tickets</li>
-          <li>Intégration FusionInventory pour l’inventaire automatisé</li>
-        </ul>
+        <br>
+        <strong>Projet 1 – AD DS :</strong> déploiement de 2 contrôleurs de domaine (172.16.2.245/246), GPO, ressources partagées.<br>
+        <em>Étapes :</em> installation ; création utilisateurs/groupes ; GPO ; partage ressources ; tests.<br><br>
+        <strong>Projet 2 – GLPI + FusionInventory :</strong> gestion de parc et tickets (serveur 172.16.2.247).<br>
+        <em>Étapes :</em> installation GLPI ; config utilisateurs/droits ; gestion tickets ; ajout matériels ; intégration FusionInventory.
       </article>
-
       <div class="docs-grid">
         <a href="Fiche%20Descriptive%20AD%20DS%20E6%20MEHDI%20TAMIRO.pdf" class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="fiche-ad-ds.png" alt="Fiche AD DS"><span class="doc-label">Fiche AD DS</span></a>
         <a href="Fiche%20descriptive%20GLPI%20E6%20TAMIRO%20MEHDI.pdf"    class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="fiche-glpi.png" alt="Fiche GLPI"><span class="doc-label">Fiche GLPI</span></a>
@@ -294,7 +283,6 @@
 
 <!-- SCRIPTS -->
 <script>
-  /* horloge */
   function updateDateTime(){
     const b=document.getElementById('dateBox');
     const n=new Date();
@@ -303,7 +291,6 @@
   }
   setInterval(updateDateTime,1000);updateDateTime();
 
-  /* scroll fluide */
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',e=>{
       const id=a.getAttribute('href');
