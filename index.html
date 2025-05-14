@@ -5,16 +5,16 @@
   <title>Portfolio – Mehdi TAMIRO</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    /* ===== RESET & BASE ===== */
+    /* ========== RESET & BASE ========= */
     *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
     body{background:#f9fafb;color:#1f2937;}
 
-    /* ===== GLOBAL LAYOUT ===== */
+    /* ========== GLOBAL LAYOUT ========= */
     .layout{min-height:100vh;display:flex;}
     section{padding:4rem 0;text-align:center;}
     .divider{width:4rem;height:2px;background:#000;margin:1rem auto;}
 
-    /* ----- sidebar ----- */
+    /* -------- sidebar -------- */
     .sidebar{width:16rem;height:100%;position:fixed;top:0;left:0;background:linear-gradient(#111827,#1f2937);color:#fff;padding:1.5rem;display:flex;flex-direction:column;border-top-right-radius:1.5rem;border-bottom-right-radius:1.5rem;box-shadow:0 0 10px rgba(0,0,0,.3);}
     .sidebar-time{text-align:center;font-size:.9rem;margin-bottom:1rem;}
     .sidebar-title{text-align:center;font-size:1.5rem;font-weight:600;margin-bottom:1rem;}
@@ -24,10 +24,10 @@
     .nav-btn:hover{background:#374151;}
     .footer-text{margin-top:auto;text-align:center;font-size:.75rem;color:#9ca3af;padding-bottom:1rem;}
 
-    /* ----- main content ----- */
+    /* -------- main content -------- */
     .content{margin-left:16rem;width:calc(100% - 16rem);padding:2rem;}
 
-    /* ----- hero ----- */
+    /* -------- hero -------- */
     #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.2rem;}
     .hero-sub{font-size:3.2rem;font-weight:800;}
     .hero-title{font-size:3.6rem;font-weight:800;}
@@ -35,7 +35,7 @@
     .btn-main{display:inline-block;background:linear-gradient(90deg,#3b82f6,#8b5cf6);color:#fff;padding:.68rem 1.4rem;border-radius:.55rem;font-size:1rem;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.18);transition:opacity .25s;}
     .btn-main:hover{opacity:.9;}
 
-    /* ----- parcours ----- */
+    /* -------- parcours -------- */
     .parcours-container{display:flex;flex-direction:column;gap:2rem;max-width:80rem;margin:2rem auto;}
     .parcours-item{display:flex;flex-direction:column;align-items:center;}
     @media(min-width:768px){.parcours-item{flex-direction:row;text-align:left;}}
@@ -44,14 +44,14 @@
     .desc{flex:1;background:#fff;margin:0 1rem;padding:1rem;border-radius:.55rem;box-shadow:0 2px 4px rgba(0,0,0,.1);}
     .desc-title{font-weight:700;margin-bottom:.3rem;}
 
-    /* ----- BTS SIO ----- */
+    /* -------- BTS SIO -------- */
     .bts-wrapper{max-width:80rem;margin:3rem auto;display:flex;flex-direction:column;gap:2rem;text-align:left;}
     @media(min-width:900px){.bts-wrapper{flex-direction:row;}}
     .bts-col{flex:1;background:#fff;border-radius:.55rem;box-shadow:0 2px 6px rgba(0,0,0,.15);padding:1.6rem;}
     .bts-col h3{text-align:center;font-size:1.45rem;font-weight:700;margin-bottom:.5rem;}
     .bts-col ul{list-style:disc;padding-left:1.3rem;line-height:1.55;}
 
-    /* ----- compétences ----- */
+    /* -------- compétences -------- */
     .compet-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;max-width:80rem;margin:3rem auto;}
     .compet-card{width:260px;background:#fff;border-radius:.75rem;box-shadow:0 4px 8px rgba(0,0,0,.12);padding:2rem;display:flex;flex-direction:column;align-items:center;gap:1rem;transition:transform .25s;}
     .compet-card:hover{transform:translateY(-6px);}
@@ -61,18 +61,17 @@
     .btn-cert{background:#6366f1;color:#fff;padding:.5rem 1.1rem;border-radius:.4rem;text-decoration:none;font-size:.9rem;}
     .btn-cert:hover{background:#4f46e5;}
 
-    /* ----- docs grid ----- */
+    /* -------- docs grid -------- */
     .docs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem;max-width:1000px;margin:2rem auto;justify-content:center;}
     .doc-card{background:#fff;border-radius:.65rem;box-shadow:0 2px 6px rgba(0,0,0,.12);overflow:hidden;text-decoration:none;color:#1f2937;transition:transform .25s;display:flex;flex-direction:column;}
     .doc-card:hover{transform:translateY(-4px);}
     .doc-thumb{width:100%;height:160px;object-fit:cover;}
     .doc-label{padding:1rem;font-weight:600;font-size:1rem;}
 
-    /* ----- stages ----- */
+    /* -------- stages -------- */
     .stage-grid{display:grid;gap:2rem;max-width:80rem;margin:0 auto;}
     .stage-card{background:#fff;border-radius:.65rem;box-shadow:0 2px 6px rgba(0,0,0,.15);padding:2rem;text-align:left;line-height:1.6;font-size:1rem;}
 
-    /* center generic paragraphs except stage-card */
     section p:not(.stage-card p){text-align:center;}
   </style>
 </head>
@@ -109,7 +108,7 @@
       <a href="CV_Mehdi_TAMIRO_Efrei_20250510.pdf" target="_blank" class="btn-main" style="margin-top:.8rem;" rel="noopener">Mon CV</a>
     </section>
 
-    <!-- PARCOURS -->
+    <!-- PARCOURS SCOLAIRE -->
     <section id="parcours-scolaire">
       <h2 class="title-big">Parcours scolaire</h2><div class="divider"></div>
       <div class="parcours-container">
@@ -150,29 +149,23 @@
     <section id="stages">
       <h2 class="title-big">Stages</h2><div class="divider"></div>
       <div class="stage-grid">
-        <!-- Stage 1 -->
         <div class="stage-card">
           <h3>Stage 1ʳᵉ année – Développeur back‑end</h3>
           <ul>
-            <li>J’ai développé une base de données et une API pour une application de suivi sportif.</li>
-            <li>J’ai créé les tables, les routes API et j’ai testé les échanges avec Postman.</li>
-            <li>J’ai corrigé les erreurs rencontrées et documenté le projet pour qu’il soit réutilisable.</li>
-            <li>Ce stage m’a permis de mieux comprendre le lien entre la théorie et la pratique.</li>
-            <li>Il m’a aussi appris à coder de manière propre et à travailler en équipe sur un vrai projet.</li>
+            <li>Création d’une base de données et d’une API REST pour une appli de suivi sportif.</li>
+            <li>Mise au point des routes, tests via Postman, correction de bugs.</li>
+            <li>Rédaction de la documentation pour réutilisation du projet.</li>
           </ul>
-          <a href="Cahier%20des%20charges%20–%20Stage%20de%201ʳᵉ%20année.pdf" target="_blank" class="btn-main" style="margin-top:1rem;" rel="noopener">Cahier des charges</a>
+          <a href="Cahier%20des%20charges%20–%20Stage%20de%201ʳᵉ%20année.pdf" class="btn-main" target="_blank" rel="noopener" style="margin-top:.7rem;">Cahier des charges</a>
         </div>
-        <!-- Stage 2 -->
         <div class="stage-card">
           <h3>Stage 2ᵉ année – Technicien support & réseau</h3>
           <ul>
-            <li>J’ai assuré le support technique dans une boutique, en intervenant sur les postes de travail et le réseau local.</li>
-            <li>J’ai corrigé des problèmes de connexion, mis à jour les systèmes, sécurisé les postes et sensibilisé les utilisateurs.</li>
-            <li>J’ai aussi proposé des améliorations pour rendre le réseau plus stable.</li>
-            <li>Ce stage m’a permis de mettre en pratique mes compétences en maintenance et sécurité.</li>
-            <li>Il m’a surtout appris à être réactif, autonome et à mieux communiquer avec des non‑techniciens.</li>
+            <li>Support utilisateurs, maintenance postes et réseau local.</li>
+            <li>Sécurisation des postes, mises à jour, sensibilisation.</li>
+            <li>Propositions d’améliorations pour la stabilité réseau.</li>
           </ul>
-          <a href="Cahier%20des%20charges%20–%20Stage%20de%202ᵉ%20année.pdf" target="_blank" class="btn-main" style="margin-top:1rem;" rel="noopener">Cahier des charges</a>
+          <a href="Cahier%20des%20charges%20–%20Stage%20de%202ᵉ%20année.pdf" class="btn-main" target="_blank" rel="noopener" style="margin-top:.7rem;">Cahier des charges</a>
         </div>
       </div>
     </section>
@@ -182,8 +175,8 @@
       <h2 class="title-big">Compétences & Certifications</h2><div class="divider"></div>
       <div class="compet-grid">
         <div class="compet-card"><img class="compet-logo" src="https://images.unsplash.com/photo-1580584126903-e2420f4e4ada?auto=format&fit=crop&w=70&q=60" alt="Logo Google"><h3 class="compet-title">Google Cybersecurity Certificate</h3><p class="compet-desc">Fondamentaux cybersécurité.</p><a href="https://www.coursera.org/account/accomplishments/certificate/2SFA9SBLY1HI" target="_blank" class="btn-cert" rel="noopener">Attestation</a></div>
-        <div class="compet-card"><img class="compet-logo" src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" alt="Logo TryHackMe"><h3 class="compet-title">CompTIA Pentest+ <br>(formation TryHackMe)</h3><p class="compet-desc">Méthodo pentest certifiée.</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-LU85GCD9QR.pdf" target="_blank" class="btn-cert" rel="noopener">Attestation</a></div>
-        <div class="compet-card"><img class="compet-logo" src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" alt="Logo TryHackMe"><h3 class="compet-title">TryHackMe – Complete Beginner</h3><p class="compet-desc">(formation TryHackMe) – Linux, réseau, web.</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RUALOZJ3I0.pdf" target="_blank" class="btn-cert" rel="noopener">Attestation</a></div>
+        <div class="compet-card"><img class="compet-logo" src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" alt="Logo TryHackMe"><h3 class="compet-title">CompTIA Pentest+<br>(TryHackMe)</h3><p class="compet-desc">Méthodo pentest certifiée.</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-LU85GCD9QR.pdf" target="_blank" class="btn-cert" rel="noopener">Attestation</a></div>
+        <div class="compet-card"><img class="compet-logo" src="https://avatars.githubusercontent.com/u/46396202?s=200&v=4" alt="Logo TryHackMe"><h3 class="compet-title">TryHackMe – Complete Beginner</h3><p class="compet-desc">Linux, réseau, web.</p><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RUALOZJ3I0.pdf" target="_blank" class="btn-cert" rel="noopener">Attestation</a></div>
       </div>
     </section>
 
@@ -191,10 +184,10 @@
     <section id="documentations">
       <h2 class="title-big">Documentations</h2><div class="divider"></div>
       <div class="docs-grid">
-        <a href="Bureau%20a%20distanceREFONTE.pdf"             class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="bureau-distance.png"       alt="Bureau à distance"><span class="doc-label">Bureau à distance</span></a>
+        <a href="Bureau%20a%20distanceREFONTE.pdf"             class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="bureau-distance-custom.png" alt="Bureau à distance"><span class="doc-label">Bureau à distance</span></a>
         <a href="Compte-rendu-reseau-complexe-2REFONTE.pdf"    class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="reseau-complexe-2.png"    alt="Réseau complexe 2"><span class="doc-label">Réseau complexe (2)</span></a>
-        <a href="Informatique%20-%20Admin%20linuxREFONTE.pdf"  class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="admin-linux.png"          alt="Admin Linux"><span class="doc-label">Admin Linux</span></a>
-        <a href="Paramétrage-Route-VlanREFONTE.pdf"            class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="route-vlan.png"           alt="Route VLAN"><span class="doc-label">Route / VLAN</span></a>
+        <a href="Informatique%20-%20Admin%20linuxREFONTE.pdf"  class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="admin-linux-custom.png"   alt="Admin Linux"><span class="doc-label">Admin Linux</span></a>
+        <a href="Param%C3%A9trage-%20Route-VlanREFONTE.pdf"    class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="route-vlan.png"           alt="Route VLAN"><span class="doc-label">Route / VLAN</span></a>
         <a href="SSHREFONTE.pdf"                               class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="ssh.png"                 alt="SSH"><span class="doc-label">SSH</span></a>
         <a href="Serveur-ApacheREFONTE.pdf"                    class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="serveur-apache.png"      alt="Serveur Apache"><span class="doc-label">Serveur Apache</span></a>
         <a href="TP%20GLPIREFONTE.pdf"                         class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="tp-glpi.png"             alt="TP GLPI"><span class="doc-label">TP GLPI</span></a>
@@ -209,7 +202,7 @@
     <!-- ÉPREUVE E5 -->
     <section id="e5">
       <h2 class="title-big">Épreuve E5</h2><div class="divider"></div>
-      <embed src="Tableau%20de%20synthèse%20-%20Epreuve%20E-%20BTS%20SIO%202025.pdf" type="application/pdf" width="100%" height="700px" />
+      <embed src="Tableau%20de%20synth%C3%A8se%20-%20Epreuve%20E-%20BTS%20SIO%202025.pdf" type="application/pdf" width="100%" height="700px" />
     </section>
 
     <!-- ÉPREUVE E6 -->
@@ -218,8 +211,8 @@
       <div class="docs-grid">
         <a href="Fiche%20Descriptive%20AD%20DS%20E6%20MEHDI%20TAMIRO.pdf" class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="fiche-ad-ds.png"     alt="Fiche AD DS"><span class="doc-label">Fiche AD DS</span></a>
         <a href="Fiche%20descriptive%20GLPI%20E6%20TAMIRO%20MEHDI.pdf"    class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="fiche-glpi.png"     alt="Fiche GLPI"><span class="doc-label">Fiche GLPI</span></a>
-        <a href="doc-technique-projet-1-1-1.pdf"                           class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="doc-ad.png"          alt="Doc AD"><span class="doc-label">Doc AD</span></a>
-        <a href="glpi%20doc%20autre.pdf"                                   class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="doc-glpi-fusion.png" alt="Doc GLPI Fusion"><span class="doc-label">Doc GLPI fusion</span></a>
+        <a href="doc%20technique%20projet-1-1-1.pdf"                       class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="doc-ad.png"          alt="Doc AD"><span class="doc-label">Doc AD</span></a>
+        <a href="glpi%20doc%20autre.pdf"                                   class="doc-card" target="_blank" rel="noopener"><img class="doc-thumb" src="doc-glpi-fusion.png" alt="Doc GLPI fusion"><span class="doc-label">Doc GLPI fusion</span></a>
       </div>
     </section>
 
@@ -248,7 +241,7 @@
 
 <!-- SCRIPTS -->
 <script>
-  /* Horloge sidebar */
+  /* horloge */
   function updateDateTime(){
     const b=document.getElementById('dateBox');
     const n=new Date();
@@ -257,14 +250,11 @@
   }
   setInterval(updateDateTime,1000);updateDateTime();
 
-  /* Scroll fluide interne */
+  /* scroll fluide */
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',e=>{
       const id=a.getAttribute('href');
-      if(id.length>1){
-        e.preventDefault();
-        document.querySelector(id).scrollIntoView({behavior:'smooth'});
-      }
+      if(id.length>1){e.preventDefault();document.querySelector(id).scrollIntoView({behavior:'smooth'});}
     });
   });
 </script>
