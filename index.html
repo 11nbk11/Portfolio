@@ -67,6 +67,22 @@
     .doc-thumb{width:100%;height:160px;object-fit:cover;}
     .doc-label{padding:1rem;font-weight:600;font-size:1rem;}
 
+    /* ===== RSS ===== */
+.rss-wrapper{max-width:80rem;margin:0 auto;}
+.rss-iframe{
+  width:100%;
+  height:600px;          /* hauteur par défaut */
+  border:none;
+  border-radius:.65rem;  /* même design que tes cards */
+  box-shadow:0 2px 6px rgba(0,0,0,.12);
+}
+
+/* un peu plus haut sur écran large */
+@media (min-width:1024px){
+  .rss-iframe{height:800px;}
+}
+
+
     /* ===== STAGES ===== */
     .stage-grid{display:grid;gap:2rem;max-width:80rem;margin:0 auto;}
     .stage-card{background:#fff;border-radius:.65rem;box-shadow:0 2px 6px rgba(0,0,0,.15);padding:2rem;text-align:left;line-height:1.6;font-size:1rem;}
@@ -257,14 +273,21 @@
       </div>
     </section>
 
-    <!-- VEILLE -->
-    <section id="veille">
-      <h2 class="title-big">Veille technologique</h2><div class="divider"></div>
-      <article style="max-width:70rem;margin:0 auto;line-height:1.7;font-size:1.05rem;text-align:left;">
-        <h3 style="text-align:center;font-size:1.6rem;font-weight:700;margin-bottom:.8rem">L’Intelligence Artificielle, un super-héros de la cybersécurité ?</h3>
-        <p>Obtenu grace au flux RSS<br><br><a href="<rssapp-wall id="HunIW8PEl1EJGeWC"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>" target="_blank" rel="noopener">Lire l’étude complète</a></p>
-      </article>
-    </section>
+  <!-- ===== VEILLE ===== -->
+<section id="veille">
+  <h2 class="title-big">Veille technologique</h2><div class="divider"></div>
+
+  <!-- conteneur centré -->
+  <div class="rss-wrapper">
+    <iframe
+      src="https://rss.app/embed/v1/wall/HunIW8PEl1EJGeWC"
+      class="rss-iframe"
+      loading="lazy"
+      title="Flux RSS cybersécurité">
+    </iframe>
+  </div>
+</section>
+
 
     <!-- CONTACT -->
     <section id="contact">
